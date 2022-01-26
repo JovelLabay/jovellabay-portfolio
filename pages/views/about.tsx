@@ -1,11 +1,9 @@
 import Head from "next/head";
 
-import Introduction from "../components/containers/home/introduction";
-import Projects from "../components/containers/projects/projects";
-import Events from "../components/containers/events/events";
+import AboutSelf from "../../components/about/aboutSelf";
 
 const meta = {
-  title: "Jovel Labay | Web & Mobile Developer",
+  title: "Jovel Labay | About",
   description:
     "A web and mobile developer based in Cagayan de Oro, Philippines",
   name: "Jovel Labay",
@@ -13,7 +11,7 @@ const meta = {
   type: "website",
 };
 
-export default function Home() {
+const About = () => {
   return (
     <>
       <Head>
@@ -29,11 +27,12 @@ export default function Home() {
         <meta property="og:image" content={meta.image} />
         <meta property="og:image:alt" content={meta.title} />
       </Head>
+
       <main>
-        <Introduction />
-        <Projects />
-        <Events />
+        <AboutSelf meta={meta} />
       </main>
     </>
   );
-}
+};
+
+export default About;

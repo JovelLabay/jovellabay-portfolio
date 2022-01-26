@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.mainContainer {
+  @apply bg-black text-white text-xl;
+}
+.container {
+  @apply h-full  max-w-screen-lg m-auto;
+}
