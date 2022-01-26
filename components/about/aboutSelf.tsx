@@ -9,7 +9,7 @@ import EducationAbout from "./educationAbout";
 import CertAbout from "./certAbout";
 
 const AboutSelf = ({ meta }) => {
-  const left: object = [
+  const left = [
     {
       id: 10,
       name: "Contact",
@@ -34,7 +34,7 @@ const AboutSelf = ({ meta }) => {
     },
   ];
 
-  const socialLink: object = [
+  const socialLink = [
     { id: 100, name: "Facebook" },
     { id: 200, name: "Instagram" },
     { id: 300, name: "Tiktok" },

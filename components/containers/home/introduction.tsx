@@ -11,7 +11,7 @@ const Introduction = () => {
     <TheHome>
       <div className="md:flex mx-4 justify-between">
         <div className="md:mr-10 ">
-          <RoundImage src={jovellabay} />
+          <RoundImage src={jovellabay} alt="This is the main profile image" />
         </div>
         <div>
           <h1 className="text-5xl font-bold py-4">{scripts.titleName}</h1>

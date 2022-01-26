@@ -2,11 +2,8 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Layout from "../layout/layout";
 
-import { Scrollbars } from "react-custom-scrollbars";
-
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    // <Scrollbars>
     <div className="mainContainer">
       <div className="container">
         <Layout>
@@ -14,7 +11,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         </Layout>
       </div>
     </div>
-    // </Scrollbars>
   );
 }
 

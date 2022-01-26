@@ -1,10 +1,6 @@
 import Link from "next/link";
 
-import {
-  ArrowRightRounded,
-  ArrowCircleUp,
-  ArrowDropUpRounded,
-} from "@mui/icons-material";
+import { ArrowRightRounded, ArrowDropUpRounded } from "@mui/icons-material";
 
 import { TheFooter } from "./footer.styled";
 

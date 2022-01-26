@@ -35,6 +35,7 @@ const Projects = () => {
                     ? jotdown
                     : humors
                 }
+                alt="This is a feature project images"
                 className="bg-cover transform hover:scale-125 transition duration-1000 ease-out hover:rotate-6 cursor-pointer"
               />
               <h1 className="bg-white rounded-sm text-black absolute top-5 left-5 py-1 px-3">

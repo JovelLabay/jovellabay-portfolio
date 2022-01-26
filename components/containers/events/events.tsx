@@ -42,7 +42,7 @@ const Events = () => {
         <div className="my-8">
           <div className="flex-col items-center">
             {tech.map((techs) => (
-              <div className="flex my-4 mx-5 items-center">
+              <div className="flex my-4 mx-5 items-center" key={techs.id}>
                 <RoundImage
                   src={
                     techs.id === 10
@@ -57,6 +57,7 @@ const Events = () => {
                   }
                   width={100}
                   height={100}
+                  alt="This is a featured tech images"
                 />
                 <div className="ml-4">
                   <p className="text-zinc-200 font-semibold">{techs.name}</p>

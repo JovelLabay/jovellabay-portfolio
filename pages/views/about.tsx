@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import AboutSelf from "../../components/about/aboutSelf";
 
-const meta = {
+const meta: any = {
   title: "Jovel Labay | About",
   description:
     "A web and mobile developer based in Cagayan de Oro, Philippines",

@@ -50,7 +50,7 @@ const DetailsAbout = () => {
             className="h-28 w-28 bg-white rounded-md flex justify-center items-center transform hover:bg-zinc-400 transition duration-2000 ease-out cursor-pointer"
           >
             <Image
-              alt="asda"
+              alt="This is the technology stack images"
               src={
                 techStacks.id === 10
                   ? javascript

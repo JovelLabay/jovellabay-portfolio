@@ -42,6 +42,7 @@ const EducationAbout = () => {
                 }
                 width={70}
                 height={70}
+                alt="These are the logos of the educational institution"
               />
             </div>
             <div>
