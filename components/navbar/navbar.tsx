@@ -24,10 +24,6 @@ const Navbar = () => {
 
   const [open, setOpen] = useState(false);
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
   return (
     <NavBar>
       <div className="md:flex justify-between items-center">
@@ -42,7 +38,9 @@ const Navbar = () => {
             <Link href={menus.id === 10 ? "/views/about" : ""} key={menus.id}>
               <a
                 className="mx-4 my-5 md:my-0 transform hover:text-zinc-400 transition duration-2000 ease-out"
-                onClick={menus.id === 10 ? "" : () => handleClickOpen}
+                onClick={() => {
+                  menus.id === 10 ? "" : setOpen(true);
+                }}
               >
                 {menus.name}
               </a>
@@ -57,7 +55,7 @@ const Navbar = () => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">Broken Link</DialogTitle>
+        <DialogTitle id="alert-dialog-title">403 Forbidden</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
             This site is not yet available for the public.

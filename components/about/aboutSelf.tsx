@@ -1,6 +1,17 @@
 import Link from "next/link";
 
+import React, { useState } from "react";
+
 import { ArrowRightRounded } from "@mui/icons-material";
+
+import {
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+} from "@mui/material";
 
 import { TheAbout } from "./about.styled";
 
@@ -50,6 +61,11 @@ const AboutSelf = () => {
     { id: 400, name: "Twitter" },
   ];
 
+  const [open, setOpen] = useState(false);
+
+  // FOR THE WINDOW
+  let myWindow;
+
   return (
     <TheAbout>
       <div className="mx-4">
@@ -64,21 +80,48 @@ const AboutSelf = () => {
                   {lefts.description}{" "}
                   {lefts.id === 10 ? (
                     <Link href="">
-                      <a className="font-normal text-white transform hover:text-zinc-400 transition duration-2000 ease-out">
+                      <a
+                        className="font-normal text-white transform hover:text-zinc-400 transition duration-2000 ease-out"
+                        onClick={() => setOpen(true)}
+                      >
                         Contact me.
                       </a>
                     </Link>
                   ) : lefts.id === 30 ? (
                     <Link href="">
-                      <a className="font-normal text-white transform hover:text-zinc-400 transition duration-2000 ease-out">
+                      <a
+                        className="font-normal text-white transform hover:text-zinc-400 transition duration-2000 ease-out"
+                        onClick={() => {
+                          myWindow = window.open(
+                            "https://calendly.com/jovellabay",
+                            "",
+                            "width=500,height=700"
+                          );
+                        }}
+                      >
                         Schedule it here.
                       </a>
                     </Link>
                   ) : lefts.id === 40 ? (
                     <div className="flex flex-col">
                       {socialLink.map((socialLinks) => (
-                        <Link key={socialLinks.id} href="">
-                          <a className="py-2 pl-2 transform hover:text-white transition duration-2000 ease-out">
+                        <Link
+                          key={socialLinks.id}
+                          href={
+                            socialLinks.id === 100
+                              ? "https://www.facebook.com/jovel.labay/"
+                              : socialLinks.id === 200
+                              ? "https://www.instagram.com/dodonglabs/"
+                              : socialLinks.id === 300
+                              ? "downloads"
+                              : "https://twitter.com/dodonglabs"
+                          }
+                        >
+                          <a
+                            className="py-2 pl-2 transform hover:text-white transition duration-2000 ease-out"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <ArrowRightRounded sx={{ fontSize: 40 }} />
                             {socialLinks.name}
                           </a>
@@ -99,6 +142,25 @@ const AboutSelf = () => {
           </div>
         </div>
       </div>
+
+      {/* DIALOG ALERT */}
+      <Dialog
+        open={open}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">403 Forbidden</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            This site is under development.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setOpen(false)} variant="outlined">
+            Come back soon
+          </Button>
+        </DialogActions>
+      </Dialog>
     </TheAbout>
   );
 };

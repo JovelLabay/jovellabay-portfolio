@@ -23,8 +23,8 @@ const Projects = () => {
               key={featuredProjects.id}
               className={
                 featuredProjects.id === 30
-                  ? "col-span-2 h-auto bg-gradient-to-tl from-gray-800 to-black rounded-md relative"
-                  : "h-auto bg-gradient-to-tl from-gray-800 to-black rounded-md relative"
+                  ? "col-span-2 h-auto bg-gradient-to-tl from-gray-800 to-black rounded-md relative my-5 md:my-0"
+                  : "h-auto bg-gradient-to-tl from-gray-800 to-black rounded-md relative my-10 md:my-0"
               }
             >
               <Image

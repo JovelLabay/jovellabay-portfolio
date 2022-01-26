@@ -1,5 +1,7 @@
 import { TheEvents, RoundImage, TheThinBorder } from "./events.styled";
 
+import Link from "next/link";
+
 import javascript from "../../../public/assests/technology/javascript2.png";
 import react from "../../../public/assests/technology/react2.png";
 import nodejs from "../../../public/assests/technology/nodejs2.png";
@@ -79,9 +81,11 @@ const Events = () => {
               </div>
             ))}
             <div className="flex justify-end">
-              <button className="bg-white text-black py-2 px-3 rounded-md transform hover:bg-zinc-400 transition duration-2000 ease-out">
-                See More
-              </button>
+              <Link href="/views/about">
+                <button className="bg-white text-black py-2 px-3 rounded-md transform hover:bg-zinc-400 transition duration-2000 ease-out">
+                  See More
+                </button>
+              </Link>
             </div>
           </div>
         </div>

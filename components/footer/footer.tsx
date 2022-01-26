@@ -25,8 +25,21 @@ const Footer = () => {
       <div className="grid grid-cols-2 mx-4">
         <div className="flex flex-col">
           {externalLink.map((externalLinks) => (
-            <Link href="" key={externalLinks.id}>
-              <a className="py-3 transform hover:text-zinc-400 transition duration-2000 ease-out">
+            <Link
+              href={
+                externalLinks.id === 10
+                  ? "https://twitter.com/dodonglabs"
+                  : externalLinks.id === 20
+                  ? "https://github.com/JovelLabay"
+                  : "downloads"
+              }
+              key={externalLinks.id}
+            >
+              <a
+                className="py-3 transform hover:text-zinc-400 transition duration-2000 ease-out"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <ArrowRightRounded sx={{ fontSize: 20 }} />
                 {externalLinks.name}
               </a>
@@ -36,7 +49,7 @@ const Footer = () => {
         <div>
           <div className="flex flex-col">
             {otherLink.map((otherLinks) => (
-              <Link href="" key={otherLinks.id}>
+              <Link href="downloads" key={otherLinks.id}>
                 <a className="py-3">{otherLinks.name}</a>
               </Link>
             ))}
