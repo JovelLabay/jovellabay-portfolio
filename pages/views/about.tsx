@@ -29,7 +29,7 @@ const About = () => {
       </Head>
 
       <main>
-        <AboutSelf meta={meta} />
+        <AboutSelf />
       </main>
     </>
   );

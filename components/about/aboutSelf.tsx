@@ -8,7 +8,16 @@ import DetailsAbout from "./detailsAbout";
 import EducationAbout from "./educationAbout";
 import CertAbout from "./certAbout";
 
-const AboutSelf = ({ meta }) => {
+const AboutSelf = () => {
+  const meta: any = {
+    title: "Jovel Labay | About",
+    description:
+      "A web and mobile developer based in Cagayan de Oro, Philippines",
+    name: "Jovel Labay",
+    image: "",
+    type: "website",
+  };
+
   const left = [
     {
       id: 10,
