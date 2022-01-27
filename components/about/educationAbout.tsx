@@ -7,8 +7,6 @@ import liceo from "../../public/assests/school/liceo.png";
 import tesda from "../../public/assests/school/tesda.png";
 
 const EducationAbout = () => {
-  const edu = "education";
-
   const school = [
     {
       id: 100,

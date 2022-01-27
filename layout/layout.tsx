@@ -1,8 +1,9 @@
-// THIS IS FOR THE OCCURENCE OF BOTH NAV AND FOOTER
+// THIS IS FOR THE OCCURRENCE OF BOTH NAV AND FOOTER
 import Navbar from "../components/navbar/navbar";
 import Footer from "../components/footer/footer";
+import React from "react";
 
-const Layout = ({ children }) => {
+const Layout: React.FC = ({ children }) => {
   return (
     <>
       <Navbar />

@@ -11,7 +11,7 @@ import Link from "next/link";
 
 import React, { useState } from "react";
 
-import { NavBar } from "../../components/navbar/navbar.styled";
+import { NavBar } from "./navbar.styled";
 
 import scripts from "../../scripts.json";
 
@@ -39,7 +39,7 @@ const Navbar = () => {
               <a
                 className="mx-4 my-5 md:my-0 transform hover:text-zinc-400 transition duration-2000 ease-out"
                 onClick={() => {
-                  menus.id === 10 ? "" : setOpen(true);
+                  menus.id !== 10 ? setOpen(true) : "";
                 }}
               >
                 {menus.name}

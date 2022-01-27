@@ -49,7 +49,7 @@ const Footer = () => {
         <div>
           <div className="flex flex-col">
             {otherLink.map((otherLinks) => (
-              <Link href="downloads" key={otherLinks.id}>
+              <Link href={"downloads"} key={otherLinks.id}>
                 <a className="py-3">{otherLinks.name}</a>
               </Link>
             ))}

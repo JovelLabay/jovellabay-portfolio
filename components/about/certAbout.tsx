@@ -1,10 +1,4 @@
 const CertAbout = () => {
-  const cert = [
-    {
-      id: 1,
-      name: "Sample",
-    },
-  ];
   return (
     <div>
       <h1 className="text-5xl font-bold my-5">Certificates</h1>

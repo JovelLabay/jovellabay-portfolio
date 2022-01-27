@@ -8,3 +8,11 @@
 .container {
   @apply h-full  max-w-screen-lg m-auto;
 }
+
+/*
+  THIS IS FOR THE FEATURED TECHNOLOGIES DEPENDING ON MY SKILLS
+*/
+
+.featuredTechStack{
+  @apply  rounded-full my-2;
+}
