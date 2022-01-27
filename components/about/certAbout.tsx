@@ -1,3 +1,5 @@
+import CircularProgress from '@mui/material/CircularProgress';
+
 const CertAbout = () => {
   return (
     <div>
@@ -9,6 +11,7 @@ const CertAbout = () => {
         <h1 className="text-zinc-400">
           Unable to load certificates at the moment.
         </h1>
+        {/*<CircularProgress />*/}
         <br />
         <p className="font-light text-zinc-400">Come back soon.</p>
       </div>

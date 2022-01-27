@@ -16,6 +16,7 @@ const About = () => {
     <>
       <Head>
         <title>{meta.title}</title>
+        <meta name="google-site-verification" content="googlea310e705aaab4552" />
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
         <meta property="og:url" content="" />
