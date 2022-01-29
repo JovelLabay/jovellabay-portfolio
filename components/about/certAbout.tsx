@@ -1,5 +1,5 @@
-import CircularProgress from '@mui/material/CircularProgress';
-
+import Box from "@mui/material/Box";
+import Skeleton from "@mui/material/Skeleton";
 const CertAbout = () => {
   return (
     <div>
@@ -12,8 +12,12 @@ const CertAbout = () => {
           Unable to load certificates at the moment.
         </h1>
         {/*<CircularProgress />*/}
-        <br />
-        <p className="font-light text-zinc-400">Come back soon.</p>
+        {/* <p className="font-light text-zinc-400">Come back soon.</p> */}
+        <Box sx={{ width: 300 }}>
+          <Skeleton className="bg-white" />
+          <Skeleton className="bg-white" />
+          <Skeleton className="bg-white" />
+        </Box>
       </div>
     </div>
   );

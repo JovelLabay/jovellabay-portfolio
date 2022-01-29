@@ -1,8 +1,13 @@
 import Link from "next/link";
 
+import React, { useState } from "react";
+
+import { Modal, Box, Typography } from "@mui/material";
+
 import { ArrowRightRounded, ArrowDropUpRounded } from "@mui/icons-material";
 
 import { TheFooter } from "./footer.styled";
+import { borderRadius } from "@mui/system";
 
 const Footer = () => {
   const externalLink = [
@@ -13,11 +18,26 @@ const Footer = () => {
 
   const otherLink = [
     { id: 10, name: "Download" },
-    { id: 20, name: "Send Email" },
+    { id: 20, name: "Send Message" },
   ];
 
   const scrollUp = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => setOpen(true);
+
+  const style = {
+    position: "absolute" as "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    bgcolor: "white",
+    boxShadow: 24,
+    p: 4,
+    borderRadius: 2,
   };
 
   return (
@@ -49,8 +69,18 @@ const Footer = () => {
         <div>
           <div className="flex flex-col">
             {otherLink.map((otherLinks) => (
-              <Link href={"downloads"} key={otherLinks.id}>
-                <a className="py-3">{otherLinks.name}</a>
+              <Link
+                href={otherLinks.id === 10 ? "downloads" : ""}
+                key={otherLinks.id}
+              >
+                <a
+                  className="py-3"
+                  onClick={() => {
+                    otherLinks.id === 20 ? handleOpen() : "";
+                  }}
+                >
+                  {otherLinks.name}
+                </a>
               </Link>
             ))}
           </div>
@@ -63,6 +93,46 @@ const Footer = () => {
           className="bg-white rounded-full cursor-pointer"
         />
       </div>
+
+      {/* MODAL FOR DIRECT EMAIL */}
+      <Modal
+        open={open}
+        onBackdropClick={() => setOpen(false)}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            Send Message Directly here
+          </Typography>
+          <form className="flex flex-col my-4">
+            <label className="font-bold text-lg">Name</label>
+            <input
+              type="text"
+              placeholder="Name"
+              className="bg-zinc-200 py-3 px-3 rounded-md my-2"
+            />
+            <label className="font-bold text-lg">Email Address*</label>
+            <input
+              required={true}
+              type="email"
+              placeholder="youremail@mail.com"
+              className="bg-zinc-200 py-3 px-3 rounded-md my-2"
+            />
+            <label className="font-bold text-lg">Message*</label>
+            <textarea
+              required={true}
+              rows={5}
+              placeholder="What's your message to me..."
+              className="bg-zinc-200 py-3 px-3 rounded-md my-2"
+            />
+
+            <button className="bg-black text-white py-2 px-3 rounded-full my-2">
+              Send
+            </button>
+          </form>
+        </Box>
+      </Modal>
     </TheFooter>
   );
 };

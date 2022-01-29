@@ -2,7 +2,12 @@ import Link from "next/link";
 
 import React, { useState } from "react";
 
-import { ArrowRightRounded } from "@mui/icons-material";
+import {
+  ArrowRightRounded,
+  Facebook,
+  Email,
+  Instagram,
+} from "@mui/icons-material";
 
 import {
   Button,
@@ -61,10 +66,13 @@ const AboutSelf = () => {
     { id: 400, name: "Twitter" },
   ];
 
-  const [open, setOpen] = useState(false);
+  const message = [
+    { id: 1, name: "Facebook" },
+    { id: 2, name: "Instagram" },
+    { id: 3, name: "Gmail" },
+  ];
 
-  // FOR THE WINDOW
-  let myWindow;
+  const [open, setOpen] = useState(false);
 
   return (
     <TheAbout>
@@ -92,7 +100,7 @@ const AboutSelf = () => {
                       <a
                         className="font-normal text-white transform hover:text-zinc-400 transition duration-2000 ease-out"
                         onClick={() => {
-                          myWindow = window.open(
+                          window.open(
                             "https://calendly.com/jovellabay",
                             "",
                             "width=500,height=700"
@@ -143,21 +151,50 @@ const AboutSelf = () => {
         </div>
       </div>
 
-      {/* DIALOG ALERT */}
+      {/* DIALOG MESSAGE ALERT */}
       <Dialog
         open={open}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">403 Forbidden</DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            This site is under development.
+        <DialogTitle id="alert-dialog-title" className="bg-black text-white">
+          Choose preferred platforms
+        </DialogTitle>
+        <DialogContent className="bg-black">
+          <DialogContentText
+            id="alert-dialog-description"
+            className="text-white flex flex-col"
+          >
+            {message.map((messages) => (
+              <a
+                key={messages.id}
+                target="_blank"
+                rel="noopener noreferrer"
+                href={
+                  messages.id === 1
+                    ? "http://www.m.me/jovel.labay/"
+                    : messages.id === 2
+                    ? "https://www.instagram.com/dodonglabs/"
+                    : "mailto:jovellabay@gmail.com"
+                }
+                className="my-1 py-2 flex justify-start hover:bg-zinc-800 rounded-md"
+              >
+                {messages.id === 1 ? (
+                  <Facebook className="mx-2" />
+                ) : messages.id === 2 ? (
+                  <Instagram className="mx-2" />
+                ) : (
+                  <Email className="mx-2" />
+                )}
+
+                {messages.name}
+              </a>
+            ))}
           </DialogContentText>
         </DialogContent>
-        <DialogActions>
+        <DialogActions className="bg-black">
           <Button onClick={() => setOpen(false)} variant="outlined">
-            Come back soon
+            Close
           </Button>
         </DialogActions>
       </Dialog>

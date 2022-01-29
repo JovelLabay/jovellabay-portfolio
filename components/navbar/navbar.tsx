@@ -55,13 +55,18 @@ const Navbar = () => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">403 Forbidden</DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
+        <DialogTitle id="alert-dialog-title" className="bg-black text-white">
+          403 Forbidden
+        </DialogTitle>
+        <DialogContent className="bg-black">
+          <DialogContentText
+            id="alert-dialog-description"
+            className="text-white"
+          >
             This site is not yet available for the public.
           </DialogContentText>
         </DialogContent>
-        <DialogActions>
+        <DialogActions className="bg-black">
           <Button onClick={() => setOpen(false)} variant="outlined">
             Come back soon
           </Button>
