@@ -127,7 +127,10 @@ const Footer = () => {
               className="bg-zinc-200 py-3 px-3 rounded-md my-2"
             />
 
-            <button className="bg-black text-white py-2 px-3 rounded-full my-2">
+            <button
+              className="bg-black text-white py-2 px-3 rounded-full my-2"
+              disabled
+            >
               Send
             </button>
           </form>
