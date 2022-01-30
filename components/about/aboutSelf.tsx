@@ -157,13 +157,13 @@ const AboutSelf = () => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title" className="bg-black text-white">
+        <DialogTitle id="alert-dialog-title">
           Choose preferred platforms
         </DialogTitle>
-        <DialogContent className="bg-black">
+        <DialogContent>
           <DialogContentText
             id="alert-dialog-description"
-            className="text-white flex flex-col"
+            className="flex flex-col"
           >
             {message.map((messages) => (
               <a
@@ -177,7 +177,7 @@ const AboutSelf = () => {
                     ? "https://www.instagram.com/dodonglabs/"
                     : "mailto:jovellabay@gmail.com"
                 }
-                className="my-1 py-2 flex justify-start hover:bg-zinc-800 rounded-md"
+                className="my-1 py-2 flex justify-start hover:bg-zinc-100 rounded-md"
               >
                 {messages.id === 1 ? (
                   <Facebook className="mx-2" />
@@ -192,7 +192,7 @@ const AboutSelf = () => {
             ))}
           </DialogContentText>
         </DialogContent>
-        <DialogActions className="bg-black">
+        <DialogActions>
           <Button onClick={() => setOpen(false)} variant="outlined">
             Close
           </Button>

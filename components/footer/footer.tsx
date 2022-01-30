@@ -2,12 +2,14 @@ import Link from "next/link";
 
 import React, { useState } from "react";
 
-import { Modal, Box, Typography } from "@mui/material";
+import { Modal, Box, Typography, Alert } from "@mui/material";
 
 import { ArrowRightRounded, ArrowDropUpRounded } from "@mui/icons-material";
 
 import { TheFooter } from "./footer.styled";
-import { borderRadius } from "@mui/system";
+
+import { storage } from "../../firebase/firebase.config";
+import { collection, addDoc } from "firebase/firestore";
 
 const Footer = () => {
   const externalLink = [
@@ -38,6 +40,36 @@ const Footer = () => {
     boxShadow: 24,
     p: 4,
     borderRadius: 2,
+  };
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const [success, setSuccess] = useState(false);
+
+  const sendMe = async () => {
+    const data1: string = name;
+    const data2: string = email;
+    const data3: string = message;
+    try {
+      await addDoc(collection(storage, data1), {
+        data1,
+        data2,
+        data3,
+      });
+      setSuccess(true);
+    } catch (e: any) {
+      alert(e.message);
+    }
+  };
+
+  const sendNow = (e: any) => {
+    e.preventDefault();
+    sendMe();
+    setName("");
+    setEmail("");
+    setMessage("");
   };
 
   return (
@@ -105,12 +137,19 @@ const Footer = () => {
           <Typography id="modal-modal-title" variant="h6" component="h2">
             Send Message Directly here
           </Typography>
-          <form className="flex flex-col my-4">
+          <p className="italic">
+            <span className="text-red-700">Note: </span>This website does not
+            include an auto-reply bot. Messages will be checked manually and
+            messages will be catered to within 2 - 4 days. Thank! you
+          </p>
+          <form className="flex flex-col my-4" onSubmit={sendNow}>
             <label className="font-bold text-lg">Name</label>
             <input
               type="text"
               placeholder="Name"
               className="bg-zinc-200 py-3 px-3 rounded-md my-2"
+              value={name}
+              onChange={(text) => setName(text.target.value)}
             />
             <label className="font-bold text-lg">Email Address*</label>
             <input
@@ -118,6 +157,8 @@ const Footer = () => {
               type="email"
               placeholder="youremail@mail.com"
               className="bg-zinc-200 py-3 px-3 rounded-md my-2"
+              value={email}
+              onChange={(text) => setEmail(text.target.value)}
             />
             <label className="font-bold text-lg">Message*</label>
             <textarea
@@ -125,14 +166,18 @@ const Footer = () => {
               rows={5}
               placeholder="What's your message to me..."
               className="bg-zinc-200 py-3 px-3 rounded-md my-2"
+              value={message}
+              onChange={(text) => setMessage(text.target.value)}
             />
-
-            <button
-              className="bg-black text-white py-2 px-3 rounded-full my-2"
-              disabled
-            >
-              Send
-            </button>
+            <div>
+              {success === true ? (
+                <Alert severity="success">Successfuly Message Sent</Alert>
+              ) : (
+                <button className="bg-black text-white py-2 px-6 rounded-full my-2">
+                  Send
+                </button>
+              )}
+            </div>
           </form>
         </Box>
       </Modal>

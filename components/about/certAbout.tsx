@@ -13,10 +13,22 @@ const CertAbout = () => {
         </h1>
         {/*<CircularProgress />*/}
         {/* <p className="font-light text-zinc-400">Come back soon.</p> */}
-        <Box sx={{ width: 300 }}>
-          <Skeleton className="bg-white" />
-          <Skeleton className="bg-white" />
-          <Skeleton className="bg-white" />
+        <Box sx={{ width: "auto" }}>
+          <Skeleton
+            variant="text"
+            sx={{ backgroundColor: "white", height: 60 }}
+            className="my-4"
+          />
+          <Skeleton
+            variant="text"
+            sx={{ backgroundColor: "white", height: 40 }}
+            className="my-4"
+          />
+          <Skeleton
+            variant="text"
+            sx={{ backgroundColor: "white", height: 20 }}
+            className="my-4"
+          />
         </Box>
       </div>
     </div>
