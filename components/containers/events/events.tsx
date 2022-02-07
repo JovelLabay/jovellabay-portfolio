@@ -1,4 +1,4 @@
-import { TheEvents, RoundImage} from "./events.styled";
+import { TheEvents, RoundImage } from "./events.styled";
 
 import Link from "next/link";
 
@@ -50,12 +50,12 @@ const Events = () => {
                     techs.id === 10
                       ? javascript
                       : techs.id === 20
-                        ? react
-                        : techs.id === 30
-                          ? nodejs
-                          : techs.id === 40
-                            ? mongdb
-                            : figma
+                      ? react
+                      : techs.id === 30
+                      ? nodejs
+                      : techs.id === 40
+                      ? mongdb
+                      : figma
                   }
                   width={100}
                   height={100}
@@ -67,23 +67,22 @@ const Events = () => {
                     {techs.experience}
                   </p>
                   {techs.id === 10 ? (
-                    <div className="featuredTechStack bg-yellow-400 w-80 h-2"/>
+                    <div className="featuredTechStack bg-yellow-400 w-52 h-2" />
                   ) : techs.id === 20 ? (
-                    <div className="featuredTechStack bg-sky-500 w-72 h-2"/>
+                    <div className="featuredTechStack bg-sky-500 w-48 h-2" />
                   ) : techs.id === 30 ? (
-                    <div className="featuredTechStack bg-green-400 w-56 h-2"/>
+                    <div className="featuredTechStack bg-green-400 w-44 h-2" />
                   ) : techs.id === 40 ? (
-                    <div className="featuredTechStack bg-green-600 w-43 h-2"/>
+                    <div className="featuredTechStack bg-green-600 w-40 h-2" />
                   ) : (
-                    <div className="featuredTechStack bg-red-500 w-72 h-2 r"/>
+                    <div className="featuredTechStack bg-red-500 w-52 h-2 r" />
                   )}
                 </div>
               </div>
             ))}
             <div className="flex justify-end">
               <Link href="/views/about">
-                <button
-                  className="bg-white text-black py-2 px-3 rounded-md transform hover:bg-zinc-400 transition duration-2000 ease-out">
+                <button className="bg-white text-black py-2 px-3 rounded-md transform hover:bg-zinc-400 transition duration-2000 ease-out">
                   See More
                 </button>
               </Link>

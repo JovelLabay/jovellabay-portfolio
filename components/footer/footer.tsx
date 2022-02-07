@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import React, { useState } from "react";
 
@@ -10,6 +11,8 @@ import { TheFooter } from "./footer.styled";
 
 import { storage } from "../../firebase/firebase.config";
 import { collection, addDoc } from "firebase/firestore";
+
+import logo from "../../public/favicon.ico";
 
 const Footer = () => {
   const externalLink = [
@@ -71,6 +74,9 @@ const Footer = () => {
     setEmail("");
     setMessage("");
   };
+
+  const myDate: Date = new Date();
+  const space: any = " ";
 
   return (
     <TheFooter>
@@ -181,6 +187,16 @@ const Footer = () => {
           </form>
         </Box>
       </Modal>
+
+      {/* FOR YEAR */}
+      <div className="flex flex-row my-3">
+        <Image src={logo} alt="webLogo" height={30} width={30} />
+        <p className="text-zinc-400 mx-2">
+          {"©"}
+          {myDate.getFullYear()}
+        </p>
+        <p className="text-zinc-400 mx-2">Jovellabay's Web Portfolio</p>
+      </div>
     </TheFooter>
   );
 };

@@ -35,11 +35,24 @@ const Navbar = () => {
         </Link>
         <div className="flex">
           {menu.map((menus) => (
-            <Link href={menus.id === 10 ? "/views/about" : ""} key={menus.id}>
+            <Link
+              href={
+                menus.id === 10
+                  ? "/views/about"
+                  : menus.id === 20
+                  ? "/views/projects"
+                  : ""
+              }
+              key={menus.id}
+            >
               <a
                 className="mx-4 my-5 md:my-0 transform hover:text-zinc-400 transition duration-2000 ease-out"
                 onClick={() => {
-                  menus.id !== 10 ? setOpen(true) : "";
+                  menus.id === 10
+                    ? null
+                    : menus.id === 20
+                    ? null
+                    : setOpen(true);
                 }}
               >
                 {menus.name}
