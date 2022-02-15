@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TheProject = styled.div`
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 `;
 
 export const Border = styled.div`

@@ -22,7 +22,7 @@ const Footer = () => {
   ];
 
   const otherLink = [
-    { id: 10, name: "Download" },
+    { id: 10, name: "Download CV" },
     { id: 20, name: "Send Message" },
   ];
 

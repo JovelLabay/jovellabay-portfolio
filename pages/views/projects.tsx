@@ -34,7 +34,7 @@ const About = () => {
       </Head>
 
       <main>
-        <div className="h-screen">
+        <div className="">
           <Project />
         </div>
       </main>
