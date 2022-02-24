@@ -57,6 +57,7 @@ const Events = () => {
                       ? mongdb
                       : figma
                   }
+                  className="transition duration-1000 ease-out hover:rotate-90"
                   width={100}
                   height={100}
                   alt="This is a featured tech images"

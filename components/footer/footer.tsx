@@ -189,7 +189,7 @@ const Footer = () => {
       </Modal>
 
       {/* FOR YEAR */}
-      <div className="flex flex-row my-3">
+      <div className="flex flex-row my-3 justify-center">
         <Image src={logo} alt="webLogo" height={30} width={30} />
         <p className="text-zinc-400 mx-2">
           {"©"}
