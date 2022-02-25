@@ -5,7 +5,13 @@ import React, { useState } from "react";
 
 import { Modal, Box, Typography, Alert } from "@mui/material";
 
-import { ArrowRightRounded, ArrowDropUpRounded } from "@mui/icons-material";
+import {
+  ArrowRightRounded,
+  ArrowDropUpRounded,
+  LinkedIn,
+  Twitter,
+  GitHub,
+} from "@mui/icons-material";
 
 import { TheFooter } from "./footer.styled";
 
@@ -94,11 +100,17 @@ const Footer = () => {
               key={externalLinks.id}
             >
               <a
-                className="py-3 transform hover:text-zinc-400 transition duration-2000 ease-out"
+                className="py-3 transform hover:text-zinc-400 hover:scale-95 transition duration-2000 ease-out"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <ArrowRightRounded sx={{ fontSize: 20 }} />
+                {externalLinks.id === 10 ? (
+                  <Twitter sx={{ fontSize: 25 }} />
+                ) : externalLinks.id === 20 ? (
+                  <GitHub sx={{ fontSize: 25 }} />
+                ) : (
+                  <LinkedIn sx={{ fontSize: 25 }} />
+                )}{" "}
                 {externalLinks.name}
               </a>
             </Link>
@@ -124,7 +136,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="justify-center flex">
+      <div className="justify-center flex transform hover:scale-75 transition duration-2000 absolute bottom-20 right-4">
         <ArrowDropUpRounded
           sx={{ fontSize: 50, color: "black" }}
           onClick={scrollUp}
@@ -192,10 +204,10 @@ const Footer = () => {
       <div className="flex flex-row my-3 justify-center">
         <Image src={logo} alt="webLogo" height={30} width={30} />
         <p className="text-zinc-400 mx-2">
-          {"©"}
-          {myDate.getFullYear()}
+          {"© "}
+          {myDate.getFullYear()}{" "}
         </p>
-        <p className="text-zinc-400 mx-2">Jovellabay's Web Portfolio</p>
+        <p className="text-zinc-400">{"Jovellabay. All rights reserved"}</p>
       </div>
     </TheFooter>
   );

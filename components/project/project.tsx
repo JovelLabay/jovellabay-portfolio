@@ -16,16 +16,16 @@ import {
 
 const Project = () => {
   const featuredProject = [
-    { name: "Food Delivery Mobile App" },
-    { name: "Mini Twitter Web Application" },
-    { name: "Library API with UI" },
-    { name: "Blog App" },
-    { name: "Stand-alone Messaging Integration" },
-    { name: "Humors iOS Application" },
+    { name: "Orderit | Mobile Application" },
+    { name: "Twitter Clone | Web Application" },
+    { name: "Library API" },
+    { name: "Blogs Web Application" },
+    { name: "Stand-alone Auto Reply Messaging Integration" },
+    { name: "Humors | iOS Application" },
     { name: "E-commerce Web Application" },
     { name: "Joke API" },
-    { name: "Jotdown Mobile Application" },
-    { name: "Weather API" },
+    { name: "Jotdown | Mobile Application" },
+    { name: "Weather Integration and API" },
   ];
 
   const [open, setOpen] = React.useState(false);
@@ -54,7 +54,8 @@ const Project = () => {
         <DialogTitle id="alert-dialog-title">403 Forbidden</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            This site is not yet available for the public.
+            Preview on the project is not yet open for public. However, you can
+            check the codebase on my github repository.
           </DialogContentText>
         </DialogContent>
         <DialogActions>

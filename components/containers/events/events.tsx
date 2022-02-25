@@ -1,4 +1,5 @@
 import { TheEvents, RoundImage } from "./events.styled";
+import { motion } from "framer-motion";
 
 import Link from "next/link";
 
@@ -40,31 +41,47 @@ const Events = () => {
   return (
     <TheEvents>
       <div className="mx-4">
-        <h1 className="text-5xl md:text-8xl font-bold">Featured Tools Stack</h1>
+        <h1 className="text-5xl md:text-8xl font-bold">Featured Techs</h1>
         <div className="my-8">
           <div className="flex-col items-center">
             {tech.map((techs) => (
               <div className="flex my-4 mx-5 items-center" key={techs.id}>
-                <RoundImage
-                  src={
-                    techs.id === 10
-                      ? javascript
-                      : techs.id === 20
-                      ? react
-                      : techs.id === 30
-                      ? nodejs
-                      : techs.id === 40
-                      ? mongdb
-                      : figma
-                  }
-                  className="transition duration-1000 ease-out hover:rotate-90"
-                  width={100}
-                  height={100}
-                  alt="This is a featured tech images"
-                />
+                <motion.div
+                  animate={{
+                    rotate: [0, 90, 180, 270, 360],
+                    scale: [1, 0.8, 0.7, 0.8, 1],
+                  }}
+                  transition={{
+                    duration: 2,
+                    ease: "circIn",
+                    times: [0, 0.2, 0.5, 0.8, 1],
+                    repeat: Infinity,
+                    repeatDelay: 1,
+                  }}
+                >
+                  <RoundImage
+                    src={
+                      techs.id === 10
+                        ? javascript
+                        : techs.id === 20
+                        ? react
+                        : techs.id === 30
+                        ? nodejs
+                        : techs.id === 40
+                        ? mongdb
+                        : figma
+                    }
+                    className="transition duration-1000 ease-out hover:rotate-90"
+                    width={80}
+                    height={80}
+                    alt="This is a featured tech images"
+                  />
+                </motion.div>
                 <div className="ml-4">
-                  <p className="text-zinc-200 font-semibold">{techs.name}</p>
-                  <p className="font-light text-zinc-400 w-80">
+                  <p className="text-zinc-200 font-semibold text-lg">
+                    {techs.name}
+                  </p>
+                  <p className="font-light text-zinc-400 w-80 text-base">
                     {techs.experience}
                   </p>
                   {techs.id === 10 ? (
@@ -83,7 +100,7 @@ const Events = () => {
             ))}
             <div className="flex justify-end">
               <Link href="/views/about">
-                <button className="bg-white text-black py-2 px-3 rounded-md transform hover:bg-zinc-400 transition duration-2000 ease-out">
+                <button className="border-2 rounded-md py-1 px-2 transition duration-2000 ease-out hover:bg-white hover:text-black hover:scale-110">
                   See More
                 </button>
               </Link>

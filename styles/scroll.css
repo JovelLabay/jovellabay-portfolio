@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+
 /* EDGE, CHROME, SAFARI */
 html::-webkit-scrollbar {
   width: 10px;
@@ -15,11 +17,9 @@ html {
   scrollbar-width: thin;
 }
 
-body {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: black;
+  font-family: "Poppins", sans-serif;
 }
-
-/* dfsdfsd */

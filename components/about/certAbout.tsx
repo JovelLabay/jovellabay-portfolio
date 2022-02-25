@@ -2,17 +2,19 @@ import Box from "@mui/material/Box";
 import Skeleton from "@mui/material/Skeleton";
 const CertAbout = () => {
   const CERTIFICATES = [
-    { title: "Web Development 2018", school: "Udemy" },
-    { title: "JavaScript", school: "Udemy" },
-    { title: "Understanding NodeJS", school: "Codedamn" },
-    { title: "Advanced NodeJS", school: "Codedamn" },
-    { title: "MongoDB", school: "Udemy" },
-    { title: "Firebase", school: "Udemy" },
-    { title: "Modern Web Development", school: "Udemy" },
-    { title: "Expo", school: "Mosh" },
-    { title: "UX Designing", school: "Coursera" },
-    { title: "PHP", school: "Udemy" },
-    { title: "FreeCodeCamp", school: "Coming Soon" },
+    { title: "Web Development 2018", school: "Udemy.com" },
+    { title: "Responsive Web Design", school: "FreeCodeCamp.Org" },
+    {
+      title: "JavaScript Algorithms and Data Structures",
+      school: "FreeCodeCamp.Org",
+    },
+    { title: "Front End Development Libraries", school: "FreeCodeCamp.Org" },
+    { title: "Backend End Development and API", school: "FreeCodeCamp.Org" },
+    { title: "Hybrid Mobile Development", school: "Net Ninja" },
+    { title: "UX & UI Designing and Prototyping", school: "Udemy.com" },
+    { title: "Databases and Cloud Platforms", school: "Unknown Data..." },
+    { title: "NodeJS and NodeJS Advanced", school: "Codedamn.com" },
+    { title: "Swift | iOS Development", school: "Coming soon..." },
   ];
   return (
     <div>
@@ -48,15 +50,18 @@ const CertAbout = () => {
             return (
               <div
                 key={index}
-                className={
-                  index != 10
-                    ? "bg-white h-28 w-64 m-2 rounded-xl flex items-center px-3"
-                    : "bg-white blur-sm h-28 w-64 m-2 rounded-xl flex items-center px-3"
-                }
+                className="bg-white h-28 w-64 m-2 rounded-xl flex items-center px-3 transform hover:bg-zinc-400 transition duration-2000 ease-out hover:scale-90"
+                // {
+                //   index != 10
+                //     ? "bg-white h-28 w-64 m-2 rounded-xl flex items-center px-3"
+                //     : "bg-white blur-sm h-28 w-64 m-2 rounded-xl flex items-center px-3"
+                // }
               >
                 <div>
-                  <h1 className="text-black ">{cert.title}</h1>
-                  <p className="text-zinc-600 text-base">{cert.school}</p>
+                  <h1 className="text-black text-base">{cert.title}</h1>
+                  <p className="text-zinc-600 text-sm font-bold">
+                    {cert.school}
+                  </p>
                 </div>
               </div>
             );

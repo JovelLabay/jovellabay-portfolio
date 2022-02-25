@@ -126,7 +126,7 @@ const AboutSelf = () => {
                           }
                         >
                           <a
-                            className="py-2 pl-2 transform hover:text-white transition duration-2000 ease-out"
+                            className="py-2 pl-2 transform hover:text-white hover:scale-90 transition duration-2000 ease-out"
                             target="_blank"
                             rel="noopener noreferrer"
                           >

@@ -7,9 +7,11 @@ import {
   DialogTitle,
 } from "@mui/material";
 
+import { LightMode, DarkMode } from "@mui/icons-material";
+
 import Link from "next/link";
 
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import { NavBar } from "./navbar.styled";
 
@@ -17,19 +19,19 @@ import scripts from "../../scripts.json";
 
 const Navbar = () => {
   const menu = [
-    { id: 10, name: "Education" },
-    { id: 20, name: "Projects" },
-    { id: 30, name: "Testimonials" },
+    { id: 10, name: "education" },
+    { id: 20, name: "projects" },
+    { id: 30, name: "testimonials" },
   ];
 
   const [open, setOpen] = useState(false);
 
   return (
     <NavBar>
-      <div className="md:flex justify-between items-center">
+      <div className="md:flex justify-between items-center mx-4">
         <Link href="/">
-          <div className="mx-4 cursor-pointer">
-            <h1 className="text-3xl font-bold">{scripts.titleName}</h1>
+          <div className="cursor-pointer">
+            <h1 className="text-3xl font-black">{scripts.titleName}</h1>
             <h1 className="font-light">{scripts.titleField}</h1>
           </div>
         </Link>
@@ -46,7 +48,7 @@ const Navbar = () => {
               key={menus.id}
             >
               <a
-                className="mx-4 my-5 md:my-0 transform hover:text-zinc-400 transition duration-2000 ease-out"
+                className="mx-1 my-5 md:my-0 transform hover:text-zinc-400 hover:scale-90 transition duration-2000 ease-out"
                 onClick={() => {
                   menus.id === 10
                     ? null
