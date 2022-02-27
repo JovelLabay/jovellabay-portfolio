@@ -136,7 +136,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="justify-center flex transform hover:scale-75 transition duration-2000 absolute bottom-20 right-4">
+      <div className="transform hover:scale-75 transition duration-2000 absolute right-4">
         <ArrowDropUpRounded
           sx={{ fontSize: 50, color: "black" }}
           onClick={scrollUp}
@@ -201,13 +201,15 @@ const Footer = () => {
       </Modal>
 
       {/* FOR YEAR */}
-      <div className="flex flex-row my-3 justify-center">
+      <div className="flex flex-row my-3 mx-4 items-center">
         <Image src={logo} alt="webLogo" height={30} width={30} />
-        <p className="text-zinc-400 mx-2">
+        <p className="text-zinc-400 mx-2 font-thin text-base">
           {"© "}
           {myDate.getFullYear()}{" "}
         </p>
-        <p className="text-zinc-400">{"Jovellabay. All rights reserved"}</p>
+        <p className="text-zinc-400 font-thin text-base">
+          {"Jovellabay. All rights reserved"}
+        </p>
       </div>
     </TheFooter>
   );

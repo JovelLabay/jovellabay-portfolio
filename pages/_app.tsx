@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </Layout>
       </div>
+      {/* <div className="absolute bottom-10 right-10">dfgdf</div> */}
     </div>
   );
 }
