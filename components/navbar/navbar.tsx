@@ -19,9 +19,9 @@ import scripts from "../../scripts.json";
 
 const Navbar = () => {
   const menu = [
-    { id: 10, name: "education" },
-    { id: 20, name: "projects" },
-    { id: 30, name: "testimonials" },
+    { id: 10, name: "Education" },
+    { id: 20, name: "Projects" },
+    { id: 30, name: "Testimonials" },
   ];
 
   const [open, setOpen] = useState(false);

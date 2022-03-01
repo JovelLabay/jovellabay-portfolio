@@ -8,6 +8,10 @@ const CertAbout = () => {
       title: "JavaScript Algorithms and Data Structures",
       school: "FreeCodeCamp.Org",
     },
+    {
+      title: "TypeScript Crash Course",
+      school: "Net Ninja",
+    },
     { title: "Front End Development Libraries", school: "FreeCodeCamp.Org" },
     { title: "Backend End Development and API", school: "FreeCodeCamp.Org" },
     { title: "Hybrid Mobile Development", school: "Net Ninja" },
@@ -15,6 +19,7 @@ const CertAbout = () => {
     { title: "Databases and Cloud Platforms", school: "Unknown Data..." },
     { title: "NodeJS and NodeJS Advanced", school: "Codedamn.com" },
     { title: "Swift | iOS Development", school: "Coming soon..." },
+    { title: "Web Security", school: "Coming soon..." },
   ];
   return (
     <div>

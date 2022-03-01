@@ -202,7 +202,7 @@ const Footer = () => {
 
       {/* FOR YEAR */}
       <div className="flex flex-row my-3 mx-4 items-center">
-        <Image src={logo} alt="webLogo" height={30} width={30} />
+        <Image src={logo} alt="webLogo" height={20} width={20} />
         <p className="text-zinc-400 mx-2 font-thin text-base">
           {"© "}
           {myDate.getFullYear()}{" "}
