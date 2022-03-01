@@ -100,7 +100,7 @@ const Events = () => {
             ))}
             <div className="flex justify-end">
               <Link href="/views/about">
-                <button className="border-2 rounded-md py-1 px-2 transition duration-2000 ease-out hover:bg-white hover:text-black hover:scale-110">
+                <button className="border-2 rounded-md py-1 px-2 transition duration-2000 ease-out hover:bg-white hover:text-black hover:scale-110 focus:scale-100">
                   See More
                 </button>
               </Link>

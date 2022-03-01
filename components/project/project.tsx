@@ -3,6 +3,8 @@ import { TheProject } from "./project.styled";
 import React from "react";
 import Image from "next/image";
 
+import { Skeleton, Box } from "@mui/material";
+
 import scripts from "../../scripts.json";
 import mama from "../../public/assests/notFound/ext.jpg";
 import {
@@ -33,8 +35,10 @@ const Project = () => {
   return (
     <TheProject>
       <div className=" mx-4">
-        <h1 className="text-5xl md:text-8xl font-bold ">Projects</h1>
-        <h3 className="pt-4 pb-14 text-zinc-400">{scripts.projects}</h3>
+        <h1 className="text-5xl md:text-8xl font-bold pb-3">Projects</h1>
+        <h3 className="pt-4 pb-14 text-zinc-400 indent-10">
+          {scripts.projects}
+        </h3>
         <div className="">
           {featuredProject.map((featuredProjects, index) => (
             <div onClick={() => setOpen(true)} key={index} className="projects">
@@ -42,6 +46,28 @@ const Project = () => {
               <h1 className="text-white mx-5">{index}</h1>
             </div>
           ))}
+        </div>
+        <div className="my-14">
+          <h1 className="text-5xl font-bold my-5">Experience</h1>
+          <Box sx={{ width: "auto" }}>
+            <p className="font-light text-zinc-400">Come back soon.</p>
+
+            <Skeleton
+              variant="text"
+              sx={{ backgroundColor: "white", height: 60 }}
+              className="my-2"
+            />
+            <Skeleton
+              variant="text"
+              sx={{ backgroundColor: "white", height: 40 }}
+              className="my-2"
+            />
+            <Skeleton
+              variant="text"
+              sx={{ backgroundColor: "white", height: 20 }}
+              className="my-2"
+            />
+          </Box>
         </div>
       </div>
 
@@ -55,7 +81,7 @@ const Project = () => {
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
             Preview on the project is not yet open for public. However, you can
-            check the codebase on my github repository.
+            check the codebase in my github repository.
           </DialogContentText>
         </DialogContent>
         <DialogActions>

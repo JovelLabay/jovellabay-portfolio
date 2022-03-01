@@ -2,9 +2,9 @@ import { Border } from "./about.styled";
 
 import Image from "next/image";
 
-import xu from "../../public/assests/school/xu.png";
 import liceo from "../../public/assests/school/liceo.png";
 import tesda from "../../public/assests/school/tesda.png";
+import xu from "../../public/assests/school/xavier.png";
 
 const EducationAbout = () => {
   const school = [
@@ -12,7 +12,7 @@ const EducationAbout = () => {
       id: 100,
       name: "Xavier University - Ateneo de Cagayan",
       program: "Bachelor of Science in Information Technology",
-      SY: "2016 - Unknown",
+      SY: "2018 - 2023",
     },
     {
       id: 200,
@@ -24,7 +24,7 @@ const EducationAbout = () => {
       id: 300,
       name: "Crossroads Training Institute",
       program: "NCII - Computer Servicing System",
-      SY: "2018 - 2018",
+      SY: "2 Months of Training",
     },
   ];
   return (

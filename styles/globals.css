@@ -10,7 +10,7 @@
 }
 
 .projects {
-  @apply h-14 bg-gradient-to-tl from-gray-800 to-black flex items-center justify-between mx-10 my-5 rounded-lg cursor-pointer transition duration-1000 ease-out hover:scale-110;
+  @apply h-auto py-3 bg-gradient-to-tl from-gray-800 to-black flex items-center justify-between mx-10 my-5 rounded-lg cursor-pointer transition duration-1000 ease-out hover:scale-110;
 }
 
 /*

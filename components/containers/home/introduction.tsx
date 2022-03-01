@@ -24,7 +24,7 @@ const Introduction = () => {
           <h3 className="py-4">
             {scripts.titleField} {"💻📱"}
           </h3>
-          <p className="font-light text-zinc-400">
+          <p className="font-light text-zinc-400 indent-10">
             {scripts.titleDescription}{" "}
             <Link href="/views/about">
               <a className="font-normal text-white hover:text-zinc-400 transform transition duration-2000 ease-out">

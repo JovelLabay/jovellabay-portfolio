@@ -9,7 +9,7 @@ const CertAbout = () => {
       school: "FreeCodeCamp.Org",
     },
     {
-      title: "TypeScript Crash Course",
+      title: "TypeScript Crash",
       school: "Net Ninja",
     },
     { title: "Front End Development Libraries", school: "FreeCodeCamp.Org" },

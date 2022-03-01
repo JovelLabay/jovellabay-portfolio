@@ -18,30 +18,34 @@ import nativebase from "../../public/assests/technology/nativebase.png";
 import php from "../../public/assests/technology/php.png";
 import graphql from "../../public/assests/technology/graphql.png";
 import figma from "../../public/assests/technology/figma.png";
+import swift from "../../public/assests/technology/swift.png";
+import callstack from "../../public/assests/technology/callstack.png";
 
 const techStack = [
   { id: 10, name: "JavasScript" },
   { id: 16, name: "typescript" },
+  { id: 40, name: "Node.js" },
   { id: 20, name: "React" },
   { id: 30, name: "Next.js" },
-  { id: 40, name: "Node.js" },
-  { id: 50, name: "Expo" },
-  { id: 60, name: "MongoDB" },
-  { id: 70, name: "Firebase" },
   { id: 80, name: "Express" },
   { id: 90, name: "Tailwindcss" },
   { id: 100, name: "MaterialUI" },
-  { id: 11, name: "MySQL" },
+  { id: 50, name: "Expo" },
   { id: 12, name: "Nativebase" },
-  { id: 13, name: "PHP" },
+  { id: 102, name: "callStack" },
+  { id: 60, name: "MongoDB" },
+  { id: 70, name: "Firebase" },
+  { id: 11, name: "MySQL" },
   { id: 14, name: "GraphQL" },
   { id: 15, name: "Figma" },
+  { id: 13, name: "PHP" },
+  { id: 101, name: "Swift" },
 ];
 
 const DetailsAbout = () => {
   return (
     <div>
-      <p className="pb-10">{scripts.aboutDescription}</p>
+      <p className="pb-10 indent-10">{scripts.aboutDescription}</p>
       <h1 className="text-5xl font-bold my-5">Technology Stack</h1>
       <div className="flex flex-wrap gap-4 pb-10">
         {techStack.map((techStacks) => (
@@ -82,6 +86,10 @@ const DetailsAbout = () => {
                   ? php
                   : techStacks.id === 14
                   ? graphql
+                  : techStacks.id === 101
+                  ? swift
+                  : techStacks.id === 102
+                  ? callstack
                   : figma
               }
             />
