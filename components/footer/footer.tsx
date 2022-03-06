@@ -177,10 +177,9 @@ const Footer = () => {
             Send Message Directly here
           </Typography>
           <p className="italic">
-            <span className="text-red-700">Note: </span>This website will soon
-            have {<span className="font-bold">auto replay chat</span>}. At the
-            moment, messages will be checked manually. Therefore, messages will
-            be catered to within 2 - 4 days. Thank! you
+            <span className="text-red-700">Note: </span>There is a hidden button
+            in this website. Find it so you can play with it.{" "}
+            {<span className="font-bold">It's under 40% developemnt.</span>}
           </p>
           <form className="flex flex-col my-4" onSubmit={sendNow}>
             <label className="font-bold text-lg">Name</label>

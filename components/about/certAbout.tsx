@@ -19,6 +19,7 @@ const CertAbout = () => {
     { title: "Databases and Cloud Platforms", school: "Unknown Data..." },
     { title: "NodeJS and NodeJS Advanced", school: "Codedamn.com" },
     { title: "Swift | iOS Development", school: "Coming soon..." },
+    { title: "SwiftUI & Xcode", school: "Coming soon..." },
     { title: "Web Security", school: "Coming soon..." },
   ];
   return (

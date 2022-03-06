@@ -133,6 +133,9 @@ export default function Chat() {
         >
           logout
         </button>
+        <button className="text-white bg-green-500 rounded-lg py-1 px-2 m-1 text-base">
+          Type Chat
+        </button>
       </div>
     </div>
   );

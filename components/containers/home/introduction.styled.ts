@@ -7,5 +7,6 @@ export const TheHome = styled.div`
 `;
 
 export const RoundImage = styled(Image)`
-  border-radius: 120px 70px 120px 70px;
+  border-radius: 120px 80px 120px 80px;
+  border: 3px solid white;
 `;

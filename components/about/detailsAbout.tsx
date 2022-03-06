@@ -20,11 +20,15 @@ import graphql from "../../public/assests/technology/graphql.png";
 import figma from "../../public/assests/technology/figma.png";
 import swift from "../../public/assests/technology/swift.png";
 import callstack from "../../public/assests/technology/callstack.png";
+import ejs from "../../public/assests/technology/ejs.png";
+import handlebars from "../../public/assests/technology/handlebars.png";
 
 const techStack = [
   { id: 10, name: "JavasScript" },
   { id: 16, name: "typescript" },
   { id: 40, name: "Node.js" },
+  { id: 200, name: "ejs" },
+  { id: 201, name: "handlebars" },
   { id: 20, name: "React" },
   { id: 30, name: "Next.js" },
   { id: 80, name: "Express" },
@@ -90,6 +94,10 @@ const DetailsAbout = () => {
                   ? swift
                   : techStacks.id === 102
                   ? callstack
+                  : techStacks.id === 200
+                  ? ejs
+                  : techStacks.id === 201
+                  ? handlebars
                   : figma
               }
             />
