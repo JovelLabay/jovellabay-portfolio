@@ -1,9 +1,8 @@
 import Head from "next/head";
 
-import AboutSelf from "../../components/about/aboutSelf";
 import Project from "../../components/project/project";
 
-const meta: any = {
+const meta = {
   title: "Jovel Labay | Projects",
   description:
     "A web and mobile developer based in Cagayan de Oro, Philippines",

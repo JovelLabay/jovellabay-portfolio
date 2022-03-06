@@ -42,7 +42,7 @@ const Navbar = () => {
                 menus.id === 10
                   ? "/views/about"
                   : menus.id === 20
-                  ? "/views/projects"
+                  ? "/views/project"
                   : ""
               }
               key={menus.id}

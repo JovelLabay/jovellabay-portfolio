@@ -15,19 +15,35 @@ import {
   DialogContentText,
   DialogTitle,
 } from "@mui/material";
+import Link from "next/link";
 
 const Project = () => {
   const featuredProject = [
-    { name: "Orderit | Mobile Application" },
-    { name: "Twitter Clone | Web Application" },
-    { name: "Library API" },
-    { name: "Blogs Web Application" },
-    { name: "Stand-alone Auto Reply Messaging Integration" },
-    { name: "Humors | iOS Application" },
-    { name: "E-commerce Web Application" },
-    { name: "Joke API" },
-    { name: "Jotdown | Mobile Application" },
-    { name: "Weather Integration and API" },
+    {
+      name: "Orderit | Mobile Application",
+      theURL: "orderit_mobile_application",
+    },
+    {
+      name: "Twitter Clone | Web Application",
+      theURL: "twitter_clone_web_application",
+    },
+    { name: "Library API", theURL: "library_api" },
+    { name: "Blogs Web Application", theURL: "blogs_web_application" },
+    {
+      name: "Stand-alone Auto Reply Messaging Integration",
+      theURL: "standalone_auto_reply_messaging_integration",
+    },
+    { name: "Humors | iOS Application", theURL: "humors_ios_application" },
+    { name: "E-commerce Web Application", theURL: "ecommerce_web_application" },
+    { name: "Joke API", theURL: "joke_api" },
+    {
+      name: "Jotdown | Mobile Application",
+      theURL: "jotdown_mobile_application",
+    },
+    {
+      name: "Weather Integration and API",
+      theURL: "weather_integration_and_api",
+    },
   ];
 
   const [open, setOpen] = React.useState(false);
@@ -41,10 +57,16 @@ const Project = () => {
         </h3>
         <div className="">
           {featuredProject.map((featuredProjects, index) => (
-            <div onClick={() => setOpen(true)} key={index} className="projects">
-              <h1 className="text-white mx-5">{featuredProjects.name}</h1>
-              <h1 className="text-white mx-5">{index}</h1>
-            </div>
+            // <Link onClick={() => setOpen(true)} key={index} className="projects">
+            <Link
+              href={`/views/project/${featuredProjects.theURL}`}
+              key={index}
+            >
+              <div className="projects">
+                <h1 className="text-white mx-5">{featuredProjects.name}</h1>
+                <h1 className="text-white mx-5">{index}</h1>
+              </div>
+            </Link>
           ))}
         </div>
         <div className="my-14">

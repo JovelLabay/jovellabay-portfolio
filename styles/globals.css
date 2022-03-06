@@ -6,11 +6,20 @@
   @apply bg-black text-white text-xl;
 }
 .container {
-  @apply h-full  max-w-screen-lg m-auto;
+  @apply h-full max-w-screen-lg m-auto;
 }
 
 .projects {
   @apply h-auto py-3 bg-gradient-to-tl from-gray-800 to-black flex items-center justify-between mx-10 my-5 rounded-lg cursor-pointer transition duration-1000 ease-out hover:scale-110;
+}
+
+.theButtons {
+  @apply text-white bg-sky-600 rounded-lg py-1 px-2 m-1 text-base;
+}
+
+/* RESPONES */
+.responses {
+  @apply bg-sky-500 text-white rounded-full my-1 mx-1 px-3 py-1 flex justify-between;
 }
 
 /*
@@ -19,4 +28,20 @@
 
 .featuredTechStack {
   @apply rounded-full my-2;
+}
+
+/* HIDDED */
+.hidded {
+  position: absolute;
+  transform: translateX(-120%);
+  background-color: white;
+  color: black;
+  padding: 0.5rem 1rem;
+  left: 0.5rem;
+  border-radius: 0 0 5px 5px;
+  font-weight: bold;
+  transition: transform 325ms ease-in-out;
+}
+.hidded:focus {
+  transform: translateX(0);
 }

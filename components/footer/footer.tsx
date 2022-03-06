@@ -41,14 +41,23 @@ const Footer = () => {
   const handleOpen = () => setOpen(true);
 
   const style = {
+    // position: "absolute" as "absolute",
+    // top: "50%",
+    // left: "50%",
+    // transform: "translate(-50%, -50%)",
+    // bgcolor: "white",
+    // boxShadow: 24,
+    // p: 4,
+    borderRadius: 5,
     position: "absolute" as "absolute",
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    bgcolor: "white",
+    width: 400,
+    bgcolor: "background.paper",
+    border: "2px solid #000",
     boxShadow: 24,
     p: 4,
-    borderRadius: 2,
   };
 
   const [name, setName] = useState("");
@@ -136,12 +145,24 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="transform hover:scale-75 transition duration-2000 absolute right-4">
+      {/* <div className="flex transform hover:scale-75 transition duration-2000 justify-center">
         <ArrowDropUpRounded
           sx={{ fontSize: 50, color: "black" }}
           onClick={scrollUp}
           className="bg-white rounded-full cursor-pointer"
         />
+      </div> */}
+
+      {/* FOR YEAR */}
+      <div className="flex flex-row my-3 mx-4 items-center">
+        <Image src={logo} alt="webLogo" height={20} width={20} />
+        <p className="text-zinc-400 mx-2 font-thin text-base">
+          {"© "}
+          {myDate.getFullYear()}{" "}
+        </p>
+        <p className="text-zinc-400 font-thin text-base">
+          {"Jovellabay. All rights reserved"}
+        </p>
       </div>
 
       {/* MODAL FOR DIRECT EMAIL */}
@@ -156,9 +177,10 @@ const Footer = () => {
             Send Message Directly here
           </Typography>
           <p className="italic">
-            <span className="text-red-700">Note: </span>This website does not
-            include an auto-reply bot. Messages will be checked manually and
-            messages will be catered to within 2 - 4 days. Thank! you
+            <span className="text-red-700">Note: </span>This website will soon
+            have {<span className="font-bold">auto replay chat</span>}. At the
+            moment, messages will be checked manually. Therefore, messages will
+            be catered to within 2 - 4 days. Thank! you
           </p>
           <form className="flex flex-col my-4" onSubmit={sendNow}>
             <label className="font-bold text-lg">Name</label>
@@ -181,9 +203,9 @@ const Footer = () => {
             <label className="font-bold text-lg">Message*</label>
             <textarea
               required={true}
-              rows={5}
+              rows={3}
               placeholder="What's your message to me..."
-              className="bg-zinc-200 py-3 px-3 rounded-md my-2"
+              className="bg-zinc-200 py-3 px-3 rounded-md my-2 lolo"
               value={message}
               onChange={(text) => setMessage(text.target.value)}
             />
@@ -191,7 +213,7 @@ const Footer = () => {
               {success === true ? (
                 <Alert severity="success">Successfuly Message Sent</Alert>
               ) : (
-                <button className="bg-black text-white py-2 px-6 rounded-full my-2">
+                <button className="border-2 border-black rounded-md py-1 px-2 transition duration-2000 ease-out hover:bg-black hover:text-white hover:scale-110 focus:scale-100">
                   Send
                 </button>
               )}
@@ -199,18 +221,6 @@ const Footer = () => {
           </form>
         </Box>
       </Modal>
-
-      {/* FOR YEAR */}
-      <div className="flex flex-row my-3 mx-4 items-center">
-        <Image src={logo} alt="webLogo" height={20} width={20} />
-        <p className="text-zinc-400 mx-2 font-thin text-base">
-          {"© "}
-          {myDate.getFullYear()}{" "}
-        </p>
-        <p className="text-zinc-400 font-thin text-base">
-          {"Jovellabay. All rights reserved"}
-        </p>
-      </div>
     </TheFooter>
   );
 };

@@ -15,7 +15,7 @@ import tailwindcss from "../../public/assests/technology/tailwindcss.png";
 import mui from "../../public/assests/technology/mui.png";
 import mysql from "../../public/assests/technology/mysql.png";
 import nativebase from "../../public/assests/technology/nativebase.png";
-import php from "../../public/assests/technology/php.png";
+// import php from "../../public/assests/technology/php.png";
 import graphql from "../../public/assests/technology/graphql.png";
 import figma from "../../public/assests/technology/figma.png";
 import swift from "../../public/assests/technology/swift.png";
@@ -38,7 +38,7 @@ const techStack = [
   { id: 11, name: "MySQL" },
   { id: 14, name: "GraphQL" },
   { id: 15, name: "Figma" },
-  { id: 13, name: "PHP" },
+  // { id: 13, name: "PHP" },
   { id: 101, name: "Swift" },
 ];
 
@@ -82,9 +82,9 @@ const DetailsAbout = () => {
                   ? mysql
                   : techStacks.id === 12
                   ? nativebase
-                  : techStacks.id === 13
-                  ? php
-                  : techStacks.id === 14
+                  : // : techStacks.id === 13
+                  // ? php
+                  techStacks.id === 14
                   ? graphql
                   : techStacks.id === 101
                   ? swift
