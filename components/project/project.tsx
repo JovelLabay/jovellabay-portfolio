@@ -57,16 +57,16 @@ const Project = () => {
         </h3>
         <div className="">
           {featuredProject.map((featuredProjects, index) => (
-            // <Link onClick={() => setOpen(true)} key={index} className="projects">
-            <Link
+            <div onClick={() => setOpen(true)} key={index} className="projects">
+              {/* <Link
               href={`/views/project/${featuredProjects.theURL}`}
               key={index}
-            >
+            > */}
               <div className="projects">
                 <h1 className="text-white mx-5">{featuredProjects.name}</h1>
                 <h1 className="text-white mx-5">{index}</h1>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
         <div className="my-14">
