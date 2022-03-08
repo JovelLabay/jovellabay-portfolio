@@ -63,10 +63,12 @@ const Footer = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [sendBtn, setSendBtn] = useState("Send");
 
   const [success, setSuccess] = useState(false);
 
   const sendMe = async () => {
+    setSendBtn("Sending...");
     const data1: string = name;
     const data2: string = email;
     const data3: string = message;
@@ -77,6 +79,10 @@ const Footer = () => {
         data3,
       });
       setSuccess(true);
+      setTimeout(() => {
+        setSuccess(!true);
+        setSendBtn("Send");
+      }, 5000);
     } catch (e: any) {
       alert(e.message);
     }
@@ -210,10 +216,12 @@ const Footer = () => {
             />
             <div>
               {success === true ? (
-                <Alert severity="success">Successfuly Message Sent</Alert>
+                <Alert severity="success">
+                  Successfuly Message Sent. Wait to cooldown.
+                </Alert>
               ) : (
                 <button className="border-2 border-black rounded-md py-1 px-2 transition duration-2000 ease-out hover:bg-black hover:text-white hover:scale-110 focus:scale-100">
-                  Send
+                  {sendBtn}
                 </button>
               )}
             </div>

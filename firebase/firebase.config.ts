@@ -14,7 +14,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-getAnalytics(app);
+// getAnalytics(app);
 // SEND MESSAGE DIRECt
 export const storage = getFirestore(app);
 
