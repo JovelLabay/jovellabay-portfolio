@@ -13,6 +13,8 @@ import {
   GitHub,
 } from "@mui/icons-material";
 
+import { motion, AnimatePresence } from "framer-motion";
+
 import { TheFooter } from "./footer.styled";
 
 import { storage } from "../../firebase/firebase.config";
@@ -36,9 +38,15 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  // MODAL
+  const [modal, setModal] = useState(false);
+
   const [open, setOpen] = useState(false);
 
-  const handleOpen = () => setOpen(true);
+  const handleOpen = () => {
+    // setOpen(true);
+    setModal(true);
+  };
 
   const style = {
     // position: "absolute" as "absolute",
@@ -134,19 +142,12 @@ const Footer = () => {
         <div>
           <div className="flex flex-col">
             {otherLink.map((otherLinks) => (
-              <Link
-                href={otherLinks.id === 10 ? "downloads" : ""}
-                key={otherLinks.id}
+              <button
+                className="py-3"
+                onClick={otherLinks.id === 20 ? () => handleOpen() : undefined}
               >
-                <a
-                  className="py-3"
-                  onClick={() => {
-                    otherLinks.id === 20 ? handleOpen() : "";
-                  }}
-                >
-                  {otherLinks.name}
-                </a>
-              </Link>
+                {otherLinks.name}
+              </button>
             ))}
           </div>
         </div>
@@ -228,6 +229,28 @@ const Footer = () => {
           </form>
         </Box>
       </Modal>
+
+      {/* MODAL */}
+      <AnimatePresence>
+        {modal && (
+          <motion.div
+            className="modal"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div
+              className="theModal"
+              initial={{ y: -250 }}
+              animate={{ y: 100 }}
+              transition={{ delay: 0.5, type: "spring" }}
+            >
+              <h1>hello</h1>
+              <button onClick={() => setModal(!true)}>Close</button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </TheFooter>
   );
 };
