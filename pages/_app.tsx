@@ -44,25 +44,25 @@ const useStyles3 = makeStyles({
 
 function MyApp({ Component, pageProps }: AppProps) {
   // SCROLL TOP
-  const [hide, setHide] = React.useState(false);
+  const [hide, setHide] = React.useState(true);
   const scrollUp = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  window.onscroll = function () {
-    scrollFunction();
-  };
+  // window.onscroll = function () {
+  //   scrollFunction();
+  // };
 
-  function scrollFunction() {
-    if (
-      document.body.scrollTop > 700 ||
-      document.documentElement.scrollTop > 700
-    ) {
-      setHide(true);
-    } else {
-      setHide(false);
-    }
-  }
+  // function scrollFunction() {
+  //   if (
+  //     document.body.scrollTop > 700 ||
+  //     document.documentElement.scrollTop > 700
+  //   ) {
+  //     setHide(true);
+  //   } else {
+  //     setHide(false);
+  //   }
+  // }
 
   // CUSTOM STYLES MIU
   const classes = useStyles();
