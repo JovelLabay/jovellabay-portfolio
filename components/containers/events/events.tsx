@@ -14,7 +14,7 @@ const Events = () => {
     {
       id: 10,
       name: "JavaScript",
-      experience: "5 years of vanilla Javascript with ES6.",
+      experience: "4 years of vanilla Javascript with ES6.",
     },
     {
       id: 20,
@@ -29,12 +29,12 @@ const Events = () => {
     {
       id: 40,
       name: "MongoDB",
-      experience: "2 years of experience on NoSQL databases.",
+      experience: "1 year of experience on NoSQL databases.",
     },
     {
       id: 50,
       name: "Figma",
-      experience: "3 years of practicing UI and UX designing.",
+      experience: "1 year of practicing UI and UX designing.",
     },
   ];
 
@@ -89,11 +89,11 @@ const Events = () => {
                   ) : techs.id === 20 ? (
                     <div className="featuredTechStack bg-sky-500 w-48 h-2" />
                   ) : techs.id === 30 ? (
-                    <div className="featuredTechStack bg-green-400 w-44 h-2" />
+                    <div className="featuredTechStack bg-green-400 w-48 h-2" />
                   ) : techs.id === 40 ? (
-                    <div className="featuredTechStack bg-green-600 w-40 h-2" />
+                    <div className="featuredTechStack bg-green-600 w-32 h-2" />
                   ) : (
-                    <div className="featuredTechStack bg-red-500 w-52 h-2 r" />
+                    <div className="featuredTechStack bg-red-500 w-32 h-2 r" />
                   )}
                 </div>
               </div>

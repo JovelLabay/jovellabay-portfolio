@@ -44,9 +44,25 @@ const useStyles3 = makeStyles({
 
 function MyApp({ Component, pageProps }: AppProps) {
   // SCROLL TOP
+  const [hide, setHide] = React.useState(false);
   const scrollUp = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 700 ||
+      document.documentElement.scrollTop > 700
+    ) {
+      setHide(true);
+    } else {
+      setHide(false);
+    }
+  }
 
   // CUSTOM STYLES MIU
   const classes = useStyles();
@@ -73,37 +89,28 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </Layout>
       </div>
-      {/* <div className="absolute bottom-10 right-10">dfgdf</div> */}
       <div className=" fixed right-10 bottom-10 ">
-        {
-          message === true ? (
-            <div className="w-80 bg-white min-h-40 rounded-lg">
-              {/* CLOSE */}
-              <div className={classes2.root}>
-                <button className={classes.root} onClick={toggleMessageClose}>
-                  Close
-                </button>
-                <p className={classes3.root}>Beta</p>
-              </div>
-              {/* CONTENT */}
-              <Chat />
+        {message === true ? (
+          <div className="w-80 bg-white min-h-40 rounded-lg">
+            {/* CLOSE */}
+            <div className={classes2.root}>
+              <button className={classes.root} onClick={toggleMessageClose}>
+                Close
+              </button>
+              <p className={classes3.root}>Beta</p>
             </div>
-          ) : null
-          // OPEN
-          //   <button
-          //     className="bg-white p-3 rounded-full cursor-pointer transform hover:scale-75 transition duration-2000"
-          //     onClick={toggleMessageOpen}
-          //   >
-          //     {<Message sx={{ fontSize: 30, color: "black" }} />}
-          //   </button>
-          // )
-        }
-        <button
-          className="bg-white p-1 rounded-full cursor-pointer transform hover:scale-75 transition duration-2000"
-          onClick={scrollUp}
-        >
-          {<ArrowDropUpRounded sx={{ fontSize: 50, color: "black" }} />}
-        </button>
+            {/* CONTENT */}
+            <Chat />
+          </div>
+        ) : null}
+        {hide && (
+          <button
+            className="bg-white p-1 rounded-full cursor-pointer transform hover:scale-75 transition duration-2000"
+            onClick={scrollUp}
+          >
+            {<ArrowDropUpRounded sx={{ fontSize: 50, color: "black" }} />}
+          </button>
+        )}
       </div>
     </div>
   );
