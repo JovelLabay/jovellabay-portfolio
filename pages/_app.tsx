@@ -81,16 +81,24 @@ function MyApp({ Component, pageProps }: AppProps) {
   }
 
   // COLOR THEME
-  if (localStorage.getItem("theme") === null) {
-    localStorage.setItem("theme", "mainContainer_Light");
-  }
 
-  const theThemeColor = localStorage.getItem("theme");
+  const [colorTheme, setColorTheme] = React.useState<string | null>(
+    "mainContainer_Dark"
+  );
 
-  const [colorTheme, setColorTheme] = React.useState(theThemeColor);
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (localStorage.getItem("theme") === undefined) {
+        localStorage.setItem("theme", "mainContainer_Light");
+      }
+
+      setColorTheme(localStorage.getItem("theme"));
+    }
+  }, []);
 
   return (
     <div className={colorTheme === null ? "mainContainer_Light" : colorTheme}>
+      <p>{colorTheme}</p>
       <button className="hidded" onClick={toggleMessageOpen}>
         Message
       </button>
