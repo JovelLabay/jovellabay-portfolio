@@ -154,7 +154,6 @@ const Footer = ({ colorTheme, setColorTheme }) => {
               <button
                 onClick={() => {
                   setColorTheme("mainContainer_Dark");
-                  localStorage.setItem("theme", "mainContainer_Dark");
                 }}
                 className="mx-2"
               >
@@ -163,7 +162,6 @@ const Footer = ({ colorTheme, setColorTheme }) => {
               <button
                 onClick={() => {
                   setColorTheme("mainContainer_Light");
-                  localStorage.setItem("theme", "mainContainer_Light");
                 }}
                 className="mx-2"
               >

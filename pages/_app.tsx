@@ -81,11 +81,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   }
 
   // COLOR THEME
-  if (localStorage.getItem("theme") === undefined) {
-    localStorage.setItem("theme", "mainContainer_Light");
-  }
-  // let color = localStorage.getItem("theme");
   const [colorTheme, setColorTheme] = React.useState("mainContainer_Light");
+
   return (
     <div className={colorTheme}>
       <button className="hidded" onClick={toggleMessageOpen}>
