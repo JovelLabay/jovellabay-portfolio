@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.mainContainer {
+.mainContainer_Light {
+  @apply bg-white text-black text-xl;
+}
+.mainContainer_Dark {
   @apply bg-black text-white text-xl;
 }
 .container {
@@ -44,4 +47,9 @@
 }
 .hidded:focus {
   transform: translateX(0);
+}
+
+/* DETAILS */
+.details_container {
+  @apply fixed bottom-0 w-full h-20 bg-white text-black;
 }

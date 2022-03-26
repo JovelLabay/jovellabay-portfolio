@@ -22,7 +22,8 @@ import { collection, addDoc } from "firebase/firestore";
 
 import logo from "../../public/favicon.ico";
 
-const Footer = () => {
+// @ts-ignore
+const Footer = ({ colorTheme, setColorTheme }) => {
   const externalLink = [
     { id: 10, name: "Twitter", icon: "Twitter" },
     { id: 20, name: "GitHub", icon: "GitHub" },
@@ -105,12 +106,11 @@ const Footer = () => {
   };
 
   const myDate: Date = new Date();
-  const space: any = " ";
 
   return (
     <TheFooter>
       <div className="grid grid-cols-2 mx-4">
-        <div className="flex flex-col">
+        <div className="flex flex-col items-start">
           {externalLink.map((externalLinks) => (
             <Link
               href={
@@ -140,7 +140,7 @@ const Footer = () => {
           ))}
         </div>
         <div>
-          <div className="flex flex-col">
+          <div className="flex flex-col items-start">
             {otherLink.map((otherLinks, index) => (
               <button
                 key={index}
@@ -150,6 +150,26 @@ const Footer = () => {
                 {otherLinks.name}
               </button>
             ))}
+            <div>
+              <button
+                onClick={() => {
+                  setColorTheme("mainContainer_Dark");
+                  localStorage.setItem("theme", "mainContainer_Dark");
+                }}
+                className="mx-2"
+              >
+                Dark
+              </button>
+              <button
+                onClick={() => {
+                  setColorTheme("mainContainer_Light");
+                  localStorage.setItem("theme", "mainContainer_Light");
+                }}
+                className="mx-2"
+              >
+                Light
+              </button>
+            </div>
           </div>
         </div>
       </div>

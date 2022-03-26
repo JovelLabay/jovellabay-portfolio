@@ -5,20 +5,27 @@ import React from "react";
 
 import { motion } from "framer-motion";
 
-const Layout: React.FC = ({ children }) => {
-  return (
-    <>
-      <motion.div
-        initial={{ y: -250 }}
-        animate={{ y: 0 }}
-        transition={{ delay: 0.3, duration: 0.7 }}
-      >
-        <Navbar />
-      </motion.div>
-      {children}
-      <Footer />
-    </>
-  );
-};
+class Layout extends React.Component<{
+  children: any;
+  colorTheme: any;
+  setColorTheme: any;
+}> {
+  render() {
+    let { children, colorTheme, setColorTheme } = this.props;
+    return (
+      <>
+        <motion.div
+          initial={{ y: -250 }}
+          animate={{ y: 0 }}
+          transition={{ delay: 0.3, duration: 0.7 }}
+        >
+          <Navbar />
+        </motion.div>
+        {children}
+        <Footer colorTheme={colorTheme} setColorTheme={setColorTheme} />
+      </>
+    );
+  }
+}
 
 export default Layout;
