@@ -8,7 +8,7 @@ export const TheEvents = styled.div`
 
 export const RoundImage = styled(Image)`
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #f1f5f9;
 `;
 
 export const TheThinBorder = styled.div`

@@ -17,7 +17,7 @@ import {
 } from "@mui/material";
 import Link from "next/link";
 
-const Project = () => {
+const Project = (props: { colorTheme: string }) => {
   const featuredProject = [
     {
       name: "Orderit | Mobile Application",
@@ -114,17 +114,35 @@ const Project = () => {
 
             <Skeleton
               variant="text"
-              sx={{ backgroundColor: "white", height: 60 }}
+              sx={{
+                backgroundColor:
+                  props.colorTheme === "mainContainer_Light"
+                    ? "black"
+                    : "white",
+                height: 60,
+              }}
               className="my-2"
             />
             <Skeleton
               variant="text"
-              sx={{ backgroundColor: "white", height: 40 }}
+              sx={{
+                backgroundColor:
+                  props.colorTheme === "mainContainer_Light"
+                    ? "black"
+                    : "white",
+                height: 40,
+              }}
               className="my-2"
             />
             <Skeleton
               variant="text"
-              sx={{ backgroundColor: "white", height: 20 }}
+              sx={{
+                backgroundColor:
+                  props.colorTheme === "mainContainer_Light"
+                    ? "black"
+                    : "white",
+                height: 20,
+              }}
               className="my-2"
             />
           </Box>

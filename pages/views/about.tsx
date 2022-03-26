@@ -11,12 +11,15 @@ const meta: any = {
   type: "website",
 };
 
-const About = () => {
+const About = (props: { colorTheme: string }) => {
   return (
     <>
       <Head>
         <title>{meta.title}</title>
-        <meta name="google-site-verification" content="_0hquK8KU9XAoLpR9mpQgrBaR6hd1We4fCBsjyIk8K4" />
+        <meta
+          name="google-site-verification"
+          content="_0hquK8KU9XAoLpR9mpQgrBaR6hd1We4fCBsjyIk8K4"
+        />
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
         <meta property="og:url" content="" />
@@ -30,7 +33,7 @@ const About = () => {
       </Head>
 
       <main>
-        <AboutSelf />
+        <AboutSelf colorTheme={props.colorTheme} />
       </main>
     </>
   );

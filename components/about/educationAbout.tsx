@@ -33,7 +33,7 @@ const EducationAbout = () => {
       {school.map((schools) => (
         <div className="mb-10" key={schools.id}>
           <div className="flex items-center">
-            <div className="mx-2 bg-white h-20 w-20 flex items-center justify-center rounded-md">
+            <div className="mx-2 bg-slate-100 h-20 w-20 flex items-center justify-center rounded-md">
               <Image
                 src={
                   schools.id === 100 ? xu : schools.id === 200 ? liceo : tesda

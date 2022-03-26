@@ -9,7 +9,7 @@ import nodejs from "../../../public/assests/technology/nodejs2.png";
 import mongdb from "../../../public/assests/technology/mongdb2.png";
 import figma from "../../../public/assests/technology/figma.png";
 
-const Events = () => {
+const Events = (props: { colorTheme: string }) => {
   const tech = [
     {
       id: 10,
@@ -78,9 +78,7 @@ const Events = () => {
                   />
                 </motion.div>
                 <div className="ml-4">
-                  <p className="text-zinc-200 font-semibold text-lg">
-                    {techs.name}
-                  </p>
+                  <p className="font-semibold text-lg">{techs.name}</p>
                   <p className="font-light text-zinc-400 w-80 text-base">
                     {techs.experience}
                   </p>
@@ -100,7 +98,13 @@ const Events = () => {
             ))}
             <div className="flex justify-end">
               <Link href="/views/about">
-                <button className="border-2 rounded-md py-1 px-2 transition duration-2000 ease-out hover:bg-white hover:text-black hover:scale-110 focus:scale-100">
+                <button
+                  className={
+                    props.colorTheme === "mainContainer_Light"
+                      ? "border-2 rounded-md py-1 px-2 transition duration-2000 ease-out hover:bg-black hover:text-white hover:scale-110 focus:scale-100"
+                      : "border-2 rounded-md py-1 px-2 transition duration-2000 ease-out hover:bg-white hover:text-black hover:scale-110 focus:scale-100"
+                  }
+                >
                   See More
                 </button>
               </Link>

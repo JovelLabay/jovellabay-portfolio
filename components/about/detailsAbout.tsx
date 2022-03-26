@@ -55,7 +55,7 @@ const DetailsAbout = () => {
         {techStack.map((techStacks) => (
           <div
             key={techStacks.id}
-            className="h-28 w-28 bg-white rounded-md flex justify-center items-center transform hover:bg-zinc-400 transition duration-1000 ease-out cursor-pointer hover:rotate-6 hover:scale-75"
+            className="h-28 w-28 bg-slate-100 rounded-md flex justify-center items-center transform hover:bg-zinc-400 transition duration-1000 ease-out cursor-pointer hover:rotate-6 hover:scale-75"
           >
             <Image
               alt="This is the technology stack images"

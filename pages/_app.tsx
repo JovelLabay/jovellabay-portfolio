@@ -87,25 +87,24 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 
   React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (localStorage.getItem("theme") === undefined) {
-        localStorage.setItem("theme", "mainContainer_Light");
-      }
-
-      setColorTheme(localStorage.getItem("theme"));
+    if (localStorage.getItem("theme") === undefined) {
+      localStorage.setItem("theme", "mainContainer_Light");
     }
+
+    setColorTheme(localStorage.getItem("theme"));
   }, []);
+
+  const koko = colorTheme === "mainContainer_Light" ? "white" : "black";
 
   return (
     <div className={colorTheme === null ? "mainContainer_Light" : colorTheme}>
-      <p>{colorTheme}</p>
       <button className="hidded" onClick={toggleMessageOpen}>
         Message
       </button>
       <div className="container">
         {/* THE MAIN CONTENT */}
         <Layout colorTheme={colorTheme} setColorTheme={setColorTheme}>
-          <Component {...pageProps} />
+          <Component {...pageProps} colorTheme={colorTheme} />
         </Layout>
       </div>
       {/* RIGHT BOTTOM BTN FOR CHAT AND SCROLL UP */}
@@ -126,10 +125,21 @@ function MyApp({ Component, pageProps }: AppProps) {
         {/* SCROLL UP BTN */}
         {hide && (
           <button
-            className="bg-white p-1 rounded-full cursor-pointer transform hover:scale-75 transition duration-2000"
+            className={
+              colorTheme === "mainContainer_Light"
+                ? "bg-black p-1 rounded-full cursor-pointer transform hover:scale-75 transition duration-2000"
+                : "bg-white p-1 rounded-full cursor-pointer transform hover:scale-75 transition duration-2000"
+            }
             onClick={scrollUp}
           >
-            {<ArrowDropUpRounded sx={{ fontSize: 50, color: "black" }} />}
+            {
+              <ArrowDropUpRounded
+                sx={{
+                  fontSize: 50,
+                  color: koko,
+                }}
+              />
+            }
           </button>
         )}
       </div>

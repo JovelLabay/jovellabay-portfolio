@@ -15,7 +15,7 @@ const meta = {
   type: "website",
 };
 
-export default function Home() {
+export default function Home(props: { colorTheme: string }) {
   return (
     <>
       <Head>
@@ -36,9 +36,10 @@ export default function Home() {
         <meta property="og:image:alt" content={meta.title} />
       </Head>
       <main>
-        <Introduction />
+        {/* @ts-ignore */}
+        <Introduction colorTheme={props.colorTheme} />
         <Projects />
-        <Events />
+        <Events colorTheme={props.colorTheme} />
       </main>
     </>
   );

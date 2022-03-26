@@ -24,7 +24,7 @@ import DetailsAbout from "./detailsAbout";
 import EducationAbout from "./educationAbout";
 import CertAbout from "./certAbout";
 
-const AboutSelf = () => {
+const AboutSelf = (props: { colorTheme: string }) => {
   const meta: any = {
     title: "Jovel Labay | About",
     description:
@@ -89,7 +89,11 @@ const AboutSelf = () => {
                   {lefts.id === 10 ? (
                     <Link href="">
                       <a
-                        className="font-normal text-white transform hover:text-zinc-400 transition duration-2000 ease-out"
+                        className={
+                          props.colorTheme === "mainContainer_Light"
+                            ? "font-normal transform transition duration-2000 ease-out text-black hover:text-zinc-400"
+                            : "font-normal transform transition duration-2000 ease-out text-white hover:text-zinc-400"
+                        }
                         onClick={() => setOpen(true)}
                       >
                         Contact me.
@@ -98,7 +102,11 @@ const AboutSelf = () => {
                   ) : lefts.id === 30 ? (
                     <Link href="">
                       <a
-                        className="font-normal text-white transform hover:text-zinc-400 transition duration-2000 ease-out"
+                        className={
+                          props.colorTheme === "mainContainer_Light"
+                            ? "font-normal transform transition duration-2000 ease-out text-black hover:text-zinc-400"
+                            : "font-normal transform transition duration-2000 ease-out text-white hover:text-zinc-400"
+                        }
                         onClick={() => {
                           window.open(
                             "https://calendly.com/jovellabay",
@@ -111,7 +119,7 @@ const AboutSelf = () => {
                       </a>
                     </Link>
                   ) : lefts.id === 40 ? (
-                    <div className="flex flex-col">
+                    <div className="flex flex-col items-start">
                       {socialLink.map((socialLinks) => (
                         <Link
                           key={socialLinks.id}
@@ -126,7 +134,7 @@ const AboutSelf = () => {
                           }
                         >
                           <a
-                            className="py-2 pl-2 transform hover:text-white hover:scale-90 transition duration-2000 ease-out"
+                            className="py-2 pl-2 transform hover:text-zinc-600 hover:scale-90 transition duration-2000 ease-out"
                             target="_blank"
                             rel="noopener noreferrer"
                           >

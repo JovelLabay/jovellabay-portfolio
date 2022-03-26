@@ -6,7 +6,7 @@ import scripts from "../../../scripts.json";
 
 import jovellabay from "../../../public/assests/images/jovellabay.jpg";
 
-const Introduction = () => {
+const Introduction = (props: { colorTheme: string }) => {
   return (
     <TheHome>
       <div className="md:flex mx-4 justify-between">
@@ -27,7 +27,13 @@ const Introduction = () => {
           <p className="font-light text-zinc-400 indent-10">
             {scripts.titleDescription}{" "}
             <Link href="/views/about">
-              <a className="font-normal text-white hover:text-zinc-400 transform transition duration-2000 ease-out">
+              <a
+                className={
+                  props.colorTheme === "mainContainer_Light"
+                    ? "font-normal transform transition duration-2000 ease-out text-black hover:text-zinc-400"
+                    : "font-normal transform transition duration-2000 ease-out text-white hover:text-zinc-400"
+                }
+              >
                 Learn more.
               </a>
             </Link>

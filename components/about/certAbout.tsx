@@ -56,7 +56,7 @@ const CertAbout = () => {
             return (
               <div
                 key={index}
-                className="bg-white h-28 w-64 m-2 rounded-xl flex items-center px-3 transform hover:bg-zinc-400 transition duration-2000 ease-out hover:scale-90"
+                className="bg-slate-100 h-28 w-64 m-2 rounded-xl flex items-center px-3 transform hover:bg-zinc-400 transition duration-2000 ease-out hover:scale-90"
                 // {
                 //   index != 10
                 //     ? "bg-white h-28 w-64 m-2 rounded-xl flex items-center px-3"

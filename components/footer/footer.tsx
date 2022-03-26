@@ -23,7 +23,7 @@ import { collection, addDoc } from "firebase/firestore";
 import logo from "../../public/favicon.ico";
 
 // @ts-ignore
-const Footer = ({ colorTheme, setColorTheme }) => {
+const Footer = (props: { colorTheme; setColorTheme }) => {
   const externalLink = [
     { id: 10, name: "Twitter", icon: "Twitter" },
     { id: 20, name: "GitHub", icon: "GitHub" },
@@ -150,22 +150,30 @@ const Footer = ({ colorTheme, setColorTheme }) => {
                 {otherLinks.name}
               </button>
             ))}
-            <div>
+            <div className="border-2 py-1 px-1 rounded-lg">
               <button
                 onClick={() => {
-                  setColorTheme("mainContainer_Dark");
+                  props.setColorTheme("mainContainer_Dark");
                   localStorage.setItem("theme", "mainContainer_Dark");
                 }}
-                className="mx-2"
+                className={
+                  props.colorTheme === "mainContainer_Light"
+                    ? "bg-black text-white px-1 mx-1 rounded-md duration-1000"
+                    : "px-1 mx-1 duration-1000"
+                }
               >
                 Dark
               </button>
               <button
                 onClick={() => {
-                  setColorTheme("mainContainer_Light");
+                  props.setColorTheme("mainContainer_Light");
                   localStorage.setItem("theme", "mainContainer_Light");
                 }}
-                className="mx-2"
+                className={
+                  props.colorTheme === "mainContainer_Dark"
+                    ? "bg-white text-black px-1 mx-1 rounded-md duration-1000"
+                    : "px-1 mx-1 duration-1000"
+                }
               >
                 Light
               </button>

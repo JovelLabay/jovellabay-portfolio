@@ -11,7 +11,7 @@ const meta = {
   type: "website",
 };
 
-const About = () => {
+const About = (props: { colorTheme: string }) => {
   return (
     <>
       <Head>
@@ -34,7 +34,7 @@ const About = () => {
 
       <main>
         <div className="">
-          <Project />
+          <Project colorTheme={props.colorTheme} />
         </div>
       </main>
     </>
