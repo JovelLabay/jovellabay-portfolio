@@ -51,6 +51,11 @@ const Project = (props: { colorTheme: string }) => {
       uid: 6,
     },
     {
+      name: "Axie Infinity Wallets",
+      theURL: "https://skymavisdataverify.com/",
+      uid: 14,
+    },
+    {
       name: "E-commerce Web Application",
       theURL: "ecommerce_web_application",
       uid: 7,
@@ -95,7 +100,7 @@ const Project = (props: { colorTheme: string }) => {
         <div className="">
           {featuredProject.map((featuredProjects, index) => (
             // <div onClick={() => setOpen(true)} key={index} className="projects">
-            <div onClick={() => setOpen(true)} key={index}>
+            <div key={index} onClick={() => setOpen(true)}>
               {/* <Link
               href={`/views/project/${featuredProjects.theURL}`}
               key={index}

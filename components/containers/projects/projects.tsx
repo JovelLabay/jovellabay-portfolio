@@ -5,27 +5,25 @@ import Image from "next/image";
 import api from "../../../public/assests/images/api.png";
 import jotdown from "../../../public/assests/images/jotdown.png";
 import humors from "../../../public/assests/images/humors.png";
+import axie from "../../../public/assests/images/axie.png";
 
 const Projects = () => {
   const featuredProject = [
     { id: 10, name: "Library API with UI" },
     { id: 20, name: "Jotdown Mobile Application" },
     { id: 30, name: "Humors iOS Application" },
+    { id: 40, name: "Axie Infinity Wallets" },
   ];
 
   return (
     <TheProjects>
       <div className="mx-4">
         <h1 className="text-5xl md:text-8xl font-bold">Featured Projects</h1>
-        <div className="my-8 md:grid grid-cols-2 gap-10">
+        <div className="my-8 grid grid-cols-1 md:grid-cols-2 md:gap-10">
           {featuredProject.map((featuredProjects) => (
             <div
               key={featuredProjects.id}
-              className={
-                featuredProjects.id === 30
-                  ? "col-span-2 h-auto bg-gradient-to-tl from-gray-800 to-black rounded-md relative my-5 md:my-0"
-                  : "h-auto bg-gradient-to-tl from-gray-800 to-black rounded-md relative my-10 md:my-0"
-              }
+              className="h-auto bg-gradient-to-tl from-gray-800 to-black rounded-md relative my-5 md:my-0"
             >
               <Image
                 src={
@@ -33,6 +31,8 @@ const Projects = () => {
                     ? api
                     : featuredProjects.id === 20
                     ? jotdown
+                    : featuredProjects.id === 40
+                    ? axie
                     : humors
                 }
                 alt="This is a feature project images"

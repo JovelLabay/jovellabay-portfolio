@@ -81,13 +81,13 @@ function MyApp({ Component, pageProps }: AppProps) {
   }
 
   // COLOR THEME
-
   const [colorTheme, setColorTheme] = React.useState<string | null>(
     "mainContainer_Dark"
   );
 
+  // DO THIS ONCE ONLY AFTER MOUNTED
   React.useEffect(() => {
-    if (localStorage.getItem("theme") === undefined) {
+    if (typeof window !== undefined) {
       localStorage.setItem("theme", "mainContainer_Light");
     }
 
@@ -98,6 +98,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <div className={colorTheme === null ? "mainContainer_Light" : colorTheme}>
+      {/* THIS IS FOR THE HIDDEN BUTTON | USE TAB TO ACCESS HIDDED FEATURES ON IT */}
       <button className="hidded" onClick={toggleMessageOpen}>
         Message
       </button>
