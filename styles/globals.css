@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 .mainContainer_Light {
-  @apply bg-white text-black text-xl;
+  @apply bg-white text-black text-xl duration-1000;
 }
 .mainContainer_Dark {
-  @apply bg-black text-white text-xl;
+  @apply bg-black text-white text-xl duration-1000;
 }
 .container {
   @apply h-full max-w-screen-lg m-auto;

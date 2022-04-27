@@ -157,8 +157,8 @@ const Footer = (props: { colorTheme; setColorTheme }) => {
                   localStorage.setItem("theme", "mainContainer_Dark");
                 }}
                 className={
-                  props.colorTheme === "mainContainer_Light"
-                    ? "bg-black text-white px-1 mx-1 rounded-md duration-1000"
+                  props.colorTheme === "mainContainer_Dark"
+                    ? "bg-white text-black px-1 mx-1 rounded-md duration-1000"
                     : "px-1 mx-1 duration-1000"
                 }
               >
@@ -170,8 +170,8 @@ const Footer = (props: { colorTheme; setColorTheme }) => {
                   localStorage.setItem("theme", "mainContainer_Light");
                 }}
                 className={
-                  props.colorTheme === "mainContainer_Dark"
-                    ? "bg-white text-black px-1 mx-1 rounded-md duration-1000"
+                  props.colorTheme === "mainContainer_Light"
+                    ? "bg-black text-white px-1 mx-1 rounded-md duration-1000"
                     : "px-1 mx-1 duration-1000"
                 }
               >

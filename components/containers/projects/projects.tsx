@@ -7,20 +7,15 @@ import jotdown from "../../../public/assests/images/jotdown.png";
 import humors from "../../../public/assests/images/humors.png";
 import axie from "../../../public/assests/images/axie.png";
 
-const Projects = () => {
-  const featuredProject = [
-    { id: 10, name: "Library API with UI" },
-    { id: 20, name: "Jotdown Mobile Application" },
-    { id: 30, name: "Humors iOS Application" },
-    { id: 40, name: "Axie Infinity Wallets" },
-  ];
+import { featuredProject2 } from "../../../modules/modules";
 
+const Projects = () => {
   return (
     <TheProjects>
       <div className="mx-4">
         <h1 className="text-5xl md:text-8xl font-bold">Featured Projects</h1>
         <div className="my-8 grid grid-cols-1 md:grid-cols-2 md:gap-10">
-          {featuredProject.map((featuredProjects) => (
+          {featuredProject2.map((featuredProjects) => (
             <div
               key={featuredProjects.id}
               className="h-auto bg-gradient-to-tl from-gray-800 to-black rounded-md relative my-5 md:my-0"
