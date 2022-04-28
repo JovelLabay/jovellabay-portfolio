@@ -87,7 +87,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   // DO THIS ONCE ONLY AFTER MOUNTED
   React.useEffect(() => {
-    if (typeof window !== undefined) {
+    // if (typeof window !== undefined) {
+    //   localStorage.setItem("theme", "mainContainer_Light");
+    // }
+
+    if (localStorage.getItem("theme") === undefined) {
       localStorage.setItem("theme", "mainContainer_Light");
     }
 

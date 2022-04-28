@@ -123,7 +123,7 @@ const Footer = (props: { colorTheme; setColorTheme }) => {
               key={externalLinks.id}
             >
               <a
-                className="py-3 transform hover:text-zinc-400 hover:scale-95 transition duration-2000 ease-out"
+                className="text-lg md:text-xl py-3 transform hover:text-zinc-400 hover:scale-95 transition duration-2000 ease-out"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -140,7 +140,7 @@ const Footer = (props: { colorTheme; setColorTheme }) => {
           ))}
         </div>
         <div>
-          <div className="flex flex-col items-start">
+          <div className="text-lg md:text-xl flex flex-col items-start">
             {otherLink.map((otherLinks, index) => (
               <button
                 key={index}
@@ -211,9 +211,11 @@ const Footer = (props: { colorTheme; setColorTheme }) => {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="theModal"
+              className={
+                props.colorTheme === "mainContainer_Dark" ? "lightie" : "darkie"
+              }
               initial={{ y: -550 }}
-              animate={{ y: 100 }}
+              animate={{ y: 50 }}
               transition={{ delay: 0.5, type: "spring" }}
             >
               <div className="flex justify-between py-2">
@@ -265,7 +267,14 @@ const Footer = (props: { colorTheme; setColorTheme }) => {
                         Successfuly Message Sent. Wait to cooldown.
                       </Alert>
                     ) : (
-                      <button className="border-2 border-black rounded-md py-1 px-2 transition duration-2000 ease-out hover:bg-black hover:text-white hover:scale-110 focus:scale-100 text-base">
+                      <button
+                        // className="border-2 border-black rounded-md py-1 px-2 transition duration-2000 ease-out hover:bg-black hover:text-white hover:scale-110 focus:scale-100 text-base"
+                        className={
+                          props.colorTheme === "mainContainer_Light"
+                            ? "border-2 rounded-md py-1 px-2 transition duration-2000 ease-out hover:bg-black hover:text-white hover:scale-110 focus:scale-100"
+                            : "border-2 rounded-md py-1 px-2 transition duration-2000 ease-out hover:bg-white hover:text-black hover:scale-110 focus:scale-100"
+                        }
+                      >
                         {sendBtn}
                       </button>
                     )}

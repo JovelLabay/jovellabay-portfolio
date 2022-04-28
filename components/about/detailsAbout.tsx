@@ -22,24 +22,30 @@ import swift from "../../public/assests/technology/swift.png";
 import callstack from "../../public/assests/technology/callstack.png";
 import ejs from "../../public/assests/technology/ejs.png";
 import handlebars from "../../public/assests/technology/handlebars.png";
+import chakra from "../../public/assests/technology/chakra.png";
+import reactNavigation from "../../public/assests/technology/reactNavigation.png";
+import jwt from "../../public/assests/technology/jsonwebtoken.png";
 
 const techStack = [
   { id: 10, name: "JavasScript" },
   { id: 16, name: "typescript" },
   { id: 40, name: "Node.js" },
-  { id: 200, name: "ejs" },
-  { id: 201, name: "handlebars" },
+  { id: 80, name: "Express" },
   { id: 20, name: "React" },
   { id: 30, name: "Next.js" },
-  { id: 80, name: "Express" },
+  { id: 200, name: "ejs" },
+  { id: 201, name: "handlebars" },
   { id: 90, name: "Tailwindcss" },
   { id: 100, name: "MaterialUI" },
+  { id: 103, name: "Chakra" },
   { id: 50, name: "Expo" },
+  { id: 105, name: "reactNavigation" },
   { id: 12, name: "Nativebase" },
   { id: 102, name: "callStack" },
   { id: 60, name: "MongoDB" },
   { id: 70, name: "Firebase" },
   { id: 11, name: "MySQL" },
+  { id: 104, name: "jwt" },
   { id: 14, name: "GraphQL" },
   { id: 15, name: "Figma" },
   // { id: 13, name: "PHP" },
@@ -98,6 +104,12 @@ const DetailsAbout = () => {
                   ? ejs
                   : techStacks.id === 201
                   ? handlebars
+                  : techStacks.id === 103
+                  ? chakra
+                  : techStacks.id === 104
+                  ? jwt
+                  : techStacks.id === 105
+                  ? reactNavigation
                   : figma
               }
             />
