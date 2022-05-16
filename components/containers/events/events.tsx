@@ -7,7 +7,7 @@ import javascript from "../../../public/assests/technology/javascript2.png";
 import react from "../../../public/assests/technology/react2.png";
 import nodejs from "../../../public/assests/technology/nodejs2.png";
 import mongdb from "../../../public/assests/technology/mongdb2.png";
-import figma from "../../../public/assests/technology/figma.png";
+import figma from "../../../public/assests/technology/expo.png";
 
 const Events = (props: { colorTheme: string }) => {
   const tech = [
@@ -23,18 +23,18 @@ const Events = (props: { colorTheme: string }) => {
     },
     {
       id: 30,
-      name: "Node.JS",
+      name: "NodeJS",
       experience: "3 years of hands-on training and deep understanding.",
     },
     {
       id: 40,
       name: "MongoDB",
-      experience: "1 year of experience on NoSQL databases.",
+      experience: "2 years of experience on NoSQL databases.",
     },
     {
       id: 50,
-      name: "Figma",
-      experience: "1 year of practicing UI and UX designing.",
+      name: "Expo CLI",
+      experience: "2 years of experience in cross-platform development..",
     },
   ];
 
@@ -45,10 +45,14 @@ const Events = (props: { colorTheme: string }) => {
         <div className="my-8">
           <div className="flex-col items-center">
             {tech.map((techs) => (
-              <div className="flex my-4 mx-5 items-center" key={techs.id}>
+              <div
+                className="flex my-4 mx-0 sm:mx-5 items-center"
+                key={techs.id}
+              >
                 <motion.div
+                  className="hidden sm:block"
                   animate={{
-                    rotate: [0, 90, 180, 270, 360],
+                    // rotate: [0, 90, 180, 270, 360],
                     scale: [1, 0.8, 0.7, 0.8, 1],
                   }}
                   transition={{
@@ -71,27 +75,37 @@ const Events = (props: { colorTheme: string }) => {
                         ? mongdb
                         : figma
                     }
-                    className="transition duration-1000 ease-out hover:rotate-90"
+                    className="transition duration-1000 ease-out hover:rotate-180"
                     width={80}
                     height={80}
                     alt="This is a featured tech images"
                   />
                 </motion.div>
-                <div className="ml-4">
+                <div className="ml-0 sm:ml-4">
                   <p className="font-semibold text-lg">{techs.name}</p>
-                  <p className="font-light text-zinc-400 w-80 text-base">
+                  <p className="font-light text-zinc-400 w-80 text-base ">
                     {techs.experience}
                   </p>
                   {techs.id === 10 ? (
-                    <div className="featuredTechStack bg-yellow-400 w-52 h-2" />
+                    <div className="featuredTechStack bg-gray-400 w-full h-2 flex items-center">
+                      <div className="featuredTechStack bg-yellow-400 w-72  h-2" />
+                    </div>
                   ) : techs.id === 20 ? (
-                    <div className="featuredTechStack bg-sky-500 w-48 h-2" />
+                    <div className="featuredTechStack bg-gray-400 w-full h-2 flex items-center">
+                      <div className="featuredTechStack bg-sky-500 w-60 h-2" />
+                    </div>
                   ) : techs.id === 30 ? (
-                    <div className="featuredTechStack bg-green-400 w-48 h-2" />
+                    <div className="featuredTechStack bg-gray-400 w-full h-2 flex items-center">
+                      <div className="featuredTechStack bg-green-600 w-52 h-2" />
+                    </div>
                   ) : techs.id === 40 ? (
-                    <div className="featuredTechStack bg-green-600 w-32 h-2" />
+                    <div className="featuredTechStack bg-gray-400 w-full h-2 flex items-center">
+                      <div className="featuredTechStack bg-green-400 w-44 h-2" />
+                    </div>
                   ) : (
-                    <div className="featuredTechStack bg-red-500 w-32 h-2 r" />
+                    <div className="featuredTechStack bg-gray-400 w-full h-2 flex items-center">
+                      <div className="featuredTechStack bg-red-500 w-44 h-2 r" />
+                    </div>
                   )}
                 </div>
               </div>

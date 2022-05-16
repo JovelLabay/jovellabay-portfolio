@@ -32,7 +32,7 @@ const Navbar = () => {
         <Link href="/">
           <div className="cursor-pointer">
             <h1 className="text-3xl font-black">{scripts.titleName}</h1>
-            <h1 className="font-light">{scripts.titleField}</h1>
+            {/* <h1 className="font-light">{scripts.titleField}</h1> */}
           </div>
         </Link>
         <div className="flex">

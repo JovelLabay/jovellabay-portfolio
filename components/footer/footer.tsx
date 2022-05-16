@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Modal, Box, Typography, Alert } from "@mui/material";
 
@@ -17,10 +17,14 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import { TheFooter } from "./footer.styled";
 
-import { storage } from "../../firebase/firebase.config";
+import { fileStorage, storage } from "../../firebase/firebase.config";
 import { collection, addDoc } from "firebase/firestore";
+import { getDownloadURL, ref } from "firebase/storage";
 
 import logo from "../../public/favicon.ico";
+
+import sample from "../../public/assests/images/api.png";
+import { async } from "@firebase/util";
 
 // @ts-ignore
 const Footer = (props: { colorTheme; setColorTheme }) => {
@@ -30,10 +34,10 @@ const Footer = (props: { colorTheme; setColorTheme }) => {
     { id: 30, name: "LinkedIn", icon: "LinkedIn" },
   ];
 
-  const otherLink = [
-    { id: 10, name: "Download CV" },
-    { id: 20, name: "Send Message" },
-  ];
+  const otherLink = {
+    download: "Download CV",
+    message: "Message Me",
+  };
 
   const scrollUp = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -107,6 +111,25 @@ const Footer = (props: { colorTheme; setColorTheme }) => {
 
   const myDate: Date = new Date();
 
+  const [urlD, setUrlD] = useState("");
+
+  async function donwload() {
+    const gsReference = ref(
+      fileStorage,
+      "gs://jovellabay-portfolio.appspot.com/Not Yet Available.pdf"
+    );
+    try {
+      const url = await getDownloadURL(gsReference);
+      setUrlD(url);
+    } catch (error) {
+      alert(error);
+    }
+  }
+
+  useEffect(() => {
+    donwload();
+  }, []);
+
   return (
     <TheFooter>
       <div className="grid grid-cols-2 mx-4">
@@ -141,15 +164,23 @@ const Footer = (props: { colorTheme; setColorTheme }) => {
         </div>
         <div>
           <div className="text-lg md:text-xl flex flex-col items-start">
-            {otherLink.map((otherLinks, index) => (
+            {/* {otherLink.map((otherLinks, index) => (
               <button
                 key={index}
                 className="py-3"
-                onClick={otherLinks.id === 20 ? () => handleOpen() : undefined}
+                onClick={
+                  otherLinks.id === 20 ? () => handleOpen() : () => donwload()
+                }
               >
                 {otherLinks.name}
               </button>
-            ))}
+            ))} */}
+            <a className="py-3" href={urlD} target="_blank" download>
+              {otherLink.download}
+            </a>
+            <button className="py-3" onClick={() => handleOpen()}>
+              {otherLink.message}
+            </button>
             <div className="border-2 py-1 px-1 rounded-lg">
               <button
                 onClick={() => {
@@ -290,3 +321,6 @@ const Footer = (props: { colorTheme; setColorTheme }) => {
 };
 
 export default Footer;
+function axios(arg0: { url: string; method: string; responseType: string }) {
+  throw new Error("Function not implemented.");
+}

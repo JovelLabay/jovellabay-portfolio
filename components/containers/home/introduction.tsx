@@ -9,7 +9,7 @@ import jovellabay from "../../../public/assests/images/jovellabay.jpg";
 const Introduction = (props: { colorTheme: string }) => {
   return (
     <TheHome>
-      <div className="md:flex mx-4 justify-between">
+      <div className="md:flex mx-4 justify-between items-center text-center md:text-left">
         <div className="md:mr-10">
           <RoundImage
             src={jovellabay}
@@ -24,7 +24,7 @@ const Introduction = (props: { colorTheme: string }) => {
           <h3 className="py-4">
             {scripts.titleField} {"💻📱"}
           </h3>
-          <p className="font-light text-zinc-400 indent-10">
+          <p className="font-light text-zinc-400">
             {scripts.titleDescription}{" "}
             <Link href="/views/about">
               <a
