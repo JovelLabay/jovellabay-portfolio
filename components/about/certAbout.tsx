@@ -1,5 +1,3 @@
-import Box from "@mui/material/Box";
-import Skeleton from "@mui/material/Skeleton";
 const CertAbout = () => {
   const CERTIFICATES = [
     { title: "Web Development 2018", school: "Udemy.com" },

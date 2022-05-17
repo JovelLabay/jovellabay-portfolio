@@ -15,7 +15,6 @@ import tailwindcss from "../../public/assests/technology/tailwindcss.png";
 import mui from "../../public/assests/technology/mui.png";
 import mysql from "../../public/assests/technology/mysql.png";
 import nativebase from "../../public/assests/technology/nativebase.png";
-// import php from "../../public/assests/technology/php.png";
 import graphql from "../../public/assests/technology/graphql.png";
 import figma from "../../public/assests/technology/figma.png";
 import swift from "../../public/assests/technology/swift.png";

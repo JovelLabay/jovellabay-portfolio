@@ -1,7 +1,6 @@
 import type { AppProps } from "next/app";
 
-import { ArrowDropUpRounded, Message, Send } from "@mui/icons-material";
-import Switch from "@mui/material/Switch";
+import { ArrowDropUpRounded} from "@mui/icons-material";
 import { makeStyles } from "@mui/styles";
 import "../styles/globals.css";
 import "./../styles/scroll.css";
@@ -77,7 +76,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     setMassage(true);
   }
   function toggleMessageClose() {
-    setMassage(!true);
+    setMassage(false);
   }
 
   // COLOR THEME
@@ -109,7 +108,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </div>
       {/* RIGHT BOTTOM BTN FOR CHAT AND SCROLL UP */}
       <div className=" fixed right-10 bottom-10 ">
-        {message === true ? (
+        {message ? (
           <div className="w-80 bg-white min-h-40 rounded-lg">
             {/* MODAL CLOSE BTN */}
             <div className={classes2.root}>

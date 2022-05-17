@@ -3,15 +3,9 @@ import Image from "next/image";
 
 import React, { useEffect, useState } from "react";
 
-import { Modal, Box, Typography, Alert } from "@mui/material";
+import { Typography, Alert } from "@mui/material";
 
-import {
-  ArrowRightRounded,
-  ArrowDropUpRounded,
-  LinkedIn,
-  Twitter,
-  GitHub,
-} from "@mui/icons-material";
+import { LinkedIn, Twitter, GitHub } from "@mui/icons-material";
 
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -22,9 +16,6 @@ import { collection, addDoc } from "firebase/firestore";
 import { getDownloadURL, ref } from "firebase/storage";
 
 import logo from "../../public/favicon.ico";
-
-import sample from "../../public/assests/images/api.png";
-import { async } from "@firebase/util";
 
 // @ts-ignore
 const Footer = (props: { colorTheme; setColorTheme }) => {
@@ -49,28 +40,7 @@ const Footer = (props: { colorTheme; setColorTheme }) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
-    // setOpen(true);
     setModal(true);
-  };
-
-  const style = {
-    // position: "absolute" as "absolute",
-    // top: "50%",
-    // left: "50%",
-    // transform: "translate(-50%, -50%)",
-    // bgcolor: "white",
-    // boxShadow: 24,
-    // p: 4,
-    borderRadius: 5,
-    position: "absolute" as "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: 400,
-    bgcolor: "background.paper",
-    border: "2px solid #000",
-    boxShadow: 24,
-    p: 4,
   };
 
   const [name, setName] = useState("");
@@ -164,17 +134,6 @@ const Footer = (props: { colorTheme; setColorTheme }) => {
         </div>
         <div>
           <div className="text-lg md:text-xl flex flex-col items-start">
-            {/* {otherLink.map((otherLinks, index) => (
-              <button
-                key={index}
-                className="py-3"
-                onClick={
-                  otherLinks.id === 20 ? () => handleOpen() : () => donwload()
-                }
-              >
-                {otherLinks.name}
-              </button>
-            ))} */}
             <a className="py-3" href={urlD} target="_blank" download>
               {otherLink.download}
             </a>
@@ -212,13 +171,6 @@ const Footer = (props: { colorTheme; setColorTheme }) => {
           </div>
         </div>
       </div>
-      {/* <div className="flex transform hover:scale-75 transition duration-2000 justify-center">
-        <ArrowDropUpRounded
-          sx={{ fontSize: 50, color: "black" }}
-          onClick={scrollUp}
-          className="bg-white rounded-full cursor-pointer"
-        />
-      </div> */}
 
       {/* FOR YEAR */}
       <div className="flex flex-row my-3 mx-4 items-center">
@@ -299,7 +251,6 @@ const Footer = (props: { colorTheme; setColorTheme }) => {
                       </Alert>
                     ) : (
                       <button
-                        // className="border-2 border-black rounded-md py-1 px-2 transition duration-2000 ease-out hover:bg-black hover:text-white hover:scale-110 focus:scale-100 text-base"
                         className={
                           props.colorTheme === "mainContainer_Light"
                             ? "border-2 rounded-md py-1 px-2 transition duration-2000 ease-out hover:bg-black hover:text-white hover:scale-110 focus:scale-100"

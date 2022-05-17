@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Communicate(props: { theUser: any; animal: any }) {
-  const { theUser, animal } = props;
 
   // @ts-ignore
   var theMessage = JSON.parse(localStorage.getItem("messages"));

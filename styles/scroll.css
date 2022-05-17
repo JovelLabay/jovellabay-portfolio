@@ -72,7 +72,7 @@ div.message_scroll {
   min-height: 200px;
   margin: 0 auto;
   border-radius: 10px;
-  padding: 9px 15px;
+  padding: 10px 20px;
   overflow-y: auto;
 }
 .lightie {
@@ -84,17 +84,27 @@ div.message_scroll {
   min-height: 200px;
   margin: 0 auto;
   border-radius: 10px;
-  padding: 9px 15px;
+  padding: 10px 20px;
   overflow-y: auto;
 }
 
-.theModal::-webkit-scrollbar {
+.darkie::-webkit-scrollbar {
   width: 10px;
 }
-.theModal::-webkit-scrollbar-track {
+.darkie::-webkit-scrollbar-track {
   margin: 1rem 0;
   background-color: white;
 }
-.theModal::-webkit-scrollbar-thumb {
+.darkie::-webkit-scrollbar-thumb {
   background-color: black;
+}
+.lightie::-webkit-scrollbar {
+  width: 10px;
+}
+.lightie::-webkit-scrollbar-track {
+  margin: 1rem 0;
+  background-color: black;
+}
+.lightie::-webkit-scrollbar-thumb {
+  background-color: white;
 }

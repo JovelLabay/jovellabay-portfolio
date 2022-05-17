@@ -11,11 +11,13 @@ import { LightMode, DarkMode } from "@mui/icons-material";
 
 import Link from "next/link";
 
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 
 import { NavBar } from "./navbar.styled";
 
 import scripts from "../../scripts.json";
+
+import NextNProgress from "nextjs-progressbar";
 
 const Navbar = () => {
   const menu = [
@@ -28,6 +30,7 @@ const Navbar = () => {
 
   return (
     <NavBar>
+      <NextNProgress color="gray" showOnShallow={false} />
       <div className="md:flex justify-between items-center mx-4">
         <Link href="/">
           <div className="cursor-pointer">
