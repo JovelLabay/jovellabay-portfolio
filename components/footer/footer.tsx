@@ -86,7 +86,7 @@ const Footer = (props: { colorTheme; setColorTheme }) => {
   async function donwload() {
     const gsReference = ref(
       fileStorage,
-      "gs://jovellabay-portfolio.appspot.com/Not Yet Available.pdf"
+      "gs://jovellabay-portfolio.appspot.com/Jovel-Labay-Software-Developer-Resume.pdf"
     );
     try {
       const url = await getDownloadURL(gsReference);

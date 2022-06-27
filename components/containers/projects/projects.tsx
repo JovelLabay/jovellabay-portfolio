@@ -6,6 +6,8 @@ import api from "../../../public/assests/images/api.png";
 import jotdown from "../../../public/assests/images/jotdown.png";
 import humors from "../../../public/assests/images/humors.png";
 import axie from "../../../public/assests/images/axie.png";
+import papahanta from "../../../public/assests/images/papahanta.png";
+import noImage from "../../../public/assests/notFound/ext.jpg";
 
 import { featuredProject2 } from "../../../modules/modules";
 
@@ -26,9 +28,13 @@ const Projects = () => {
                     ? api
                     : featuredProjects.id === 20
                     ? jotdown
+                    : featuredProjects.id === 30
+                    ? humors
                     : featuredProjects.id === 40
                     ? axie
-                    : humors
+                    : featuredProjects.id === 50
+                    ? papahanta
+                    : noImage
                 }
                 alt="This is a feature project images"
                 className="bg-cover transform hover:scale-125 transition duration-1000 ease-out hover:rotate-6 cursor-pointer"

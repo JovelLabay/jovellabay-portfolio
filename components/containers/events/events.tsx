@@ -100,11 +100,11 @@ const Events = (props: { colorTheme: string }) => {
                     </div>
                   ) : techs.id === 40 ? (
                     <div className="featuredTechStack bg-gray-400 w-full h-2 flex items-center">
-                      <div className="featuredTechStack bg-green-400 w-44 h-2" />
+                      <div className="featuredTechStack bg-green-400 w-52 h-2" />
                     </div>
                   ) : (
                     <div className="featuredTechStack bg-gray-400 w-full h-2 flex items-center">
-                      <div className="featuredTechStack bg-red-500 w-44 h-2 r" />
+                      <div className="featuredTechStack bg-red-500 w-60 h-2" />
                     </div>
                   )}
                 </div>

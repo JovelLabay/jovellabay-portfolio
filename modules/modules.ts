@@ -66,6 +66,16 @@ const featuredProject = [
     theURL: "rest_api",
     uid: 13,
   },
+  {
+    name: "Cross-Platform Mobile App | Papahanta",
+    theURL: "rest_api",
+    uid: 14,
+  },
+  {
+    name: "Web-based Library App",
+    theURL: "rest_api",
+    uid: 15,
+  },
 ];
 
 const featuredProject2 = [
@@ -73,6 +83,8 @@ const featuredProject2 = [
   { id: 20, name: "Jotdown Mobile Application" },
   { id: 30, name: "Humors iOS Application" },
   { id: 40, name: "Axie Infinity Wallets" },
+  { id: 50, name: "Cross-Platform Mobile Application" },
+  { id: 60, name: "Web-based Library App" },
 ];
 
 export { featuredProject, featuredProject2 };
