@@ -1,12 +1,12 @@
 import type { AppProps } from "next/app";
 
-import { ArrowDropUpRounded} from "@mui/icons-material";
+import { ArrowDropUpRounded } from "@mui/icons-material";
 import { makeStyles } from "@mui/styles";
 import "../styles/globals.css";
 import "./../styles/scroll.css";
 
-import Layout from "../layout/layout";
 import React from "react";
+import Layout from "../layout/layout";
 
 import Chat from "../components/chat/chat";
 
@@ -96,6 +96,16 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <div className={colorTheme === null ? "mainContainer_Light" : colorTheme}>
+      <div
+        className={
+          colorTheme === "mainContainer_Light"
+            ? "z-50 top-0 w-full st sticky text-center p-3 bg-black text-white"
+            : "z-50 top-0 w-full st sticky text-center p-3 bg-white text-black"
+        }
+      >
+        This Web Portfolio is no longer maintained. Please download my CV below
+        for latest references.
+      </div>
       {/* THIS IS FOR THE HIDDEN BUTTON | USE TAB TO ACCESS HIDDED FEATURES ON IT */}
       <button className="hidded" onClick={toggleMessageOpen}>
         Message

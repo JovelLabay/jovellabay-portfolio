@@ -1,19 +1,19 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-import { Typography, Alert } from "@mui/material";
+import { Alert, Typography } from "@mui/material";
 
-import { LinkedIn, Twitter, GitHub } from "@mui/icons-material";
+import { GitHub, LinkedIn, Twitter } from "@mui/icons-material";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 import { TheFooter } from "./footer.styled";
 
-import { fileStorage, storage } from "../../firebase/firebase.config";
-import { collection, addDoc } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 import { getDownloadURL, ref } from "firebase/storage";
+import { fileStorage, storage } from "../../firebase/firebase.config";
 
 import logo from "../../public/favicon.ico";
 
@@ -86,7 +86,7 @@ const Footer = (props: { colorTheme; setColorTheme }) => {
   async function donwload() {
     const gsReference = ref(
       fileStorage,
-      "gs://jovellabay-portfolio.appspot.com/Jovel-Labay-Software-Developer-Resume.pdf"
+      "gs://jovellabay-portfolio.appspot.com/Jovel_Labay_Resume.pdf"
     );
     try {
       const url = await getDownloadURL(gsReference);

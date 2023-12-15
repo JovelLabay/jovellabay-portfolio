@@ -1,7 +1,7 @@
 // THIS IS FOR THE OCCURRENCE OF BOTH NAV AND FOOTER
-import Navbar from "../components/navbar/navbar";
-import Footer from "../components/footer/footer";
 import React from "react";
+import Footer from "../components/footer/footer";
+import Navbar from "../components/navbar/navbar";
 
 import { motion } from "framer-motion";
 
