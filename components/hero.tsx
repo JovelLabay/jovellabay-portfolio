@@ -10,6 +10,7 @@ export function Hero() {
         {profile.name}
       </h1>
       <p className="mt-4 text-lg text-ink md:text-xl">{profile.role}</p>
+      <p className="mt-1 text-sm text-muted">{profile.focus}</p>
       <p className="mt-8 max-w-2xl text-base leading-relaxed text-muted md:text-lg">
         {profile.summary}
       </p>

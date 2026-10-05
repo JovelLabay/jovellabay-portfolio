@@ -1,6 +1,15 @@
+export const site = {
+  url: "https://jovellabay.vercel.app",
+  title: "Jovel Labay | Full-Stack JavaScript Developer",
+  description:
+    "Full-stack developer in Cagayan de Oro with 5 years shipping React, Next.js, and React Native products. Founder of Billouvent and Moto Factory.",
+  github: "https://github.com/JovelLabay",
+};
+
 export const profile = {
   name: "Jovel Labay",
   role: "Full-Stack JavaScript Developer",
+  focus: "Web, mobile, and product engineering",
   location: "Cagayan de Oro City, Philippines",
   email: "jovellabay@gmail.com",
   phone: "+63 939 771 5303",
