@@ -1,11 +1,8 @@
 export function BulletList({ items }: { items: string[] }) {
   return (
-    <ul className="max-w-2xl space-y-2 text-sm leading-relaxed text-muted">
+    <ul className="max-w-2xl list-disc space-y-2 pl-5 text-sm leading-relaxed text-muted">
       {items.map((item) => (
-        <li key={item} className="-indent-4 pl-4">
-          <span aria-hidden="true">— </span>
-          {item}
-        </li>
+        <li key={item}>{item}</li>
       ))}
     </ul>
   );

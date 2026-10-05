@@ -1,3 +1,4 @@
+import { ContactLinks } from "@/components/contact-links";
 import { facts, profile } from "@/lib/profile";
 
 export function Hero() {
@@ -14,6 +15,7 @@ export function Hero() {
       <p className="mt-8 max-w-2xl text-base leading-relaxed text-muted md:text-lg">
         {profile.summary}
       </p>
+      <ContactLinks className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm" />
       <ul className="mt-12 grid gap-8 border-t border-line pt-8 sm:grid-cols-3">
         {facts.map((fact) => (
           <li key={fact.label}>

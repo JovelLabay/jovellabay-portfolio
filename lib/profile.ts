@@ -1,26 +1,27 @@
 export const site = {
   url: "https://jovellabay.vercel.app",
-  title: "Jovel Labay | Full-Stack JavaScript Developer",
+  title: "Jovel Labay | Lead Full-Stack Engineer",
   description:
-    "Full-stack developer in Cagayan de Oro with 5 years shipping React, Next.js, and React Native products. Founder of Billouvent and Moto Factory.",
+    "Lead full-stack engineer and product builder in Cagayan de Oro. 5+ years leading web and mobile platforms, including a live POS, an e-commerce store, and a system used across 2,000+ branches.",
   github: "https://github.com/JovelLabay",
+  resume: "/jovel-labay-resume.pdf",
 };
 
 export const profile = {
   name: "Jovel Labay",
-  role: "Full-Stack JavaScript Developer",
-  focus: "Web, mobile, and product engineering",
+  role: "Lead Full-Stack Engineer",
+  focus: "Technical product ownership for web and mobile",
   location: "Cagayan de Oro City, Philippines",
   email: "jovellabay@gmail.com",
   phone: "+63 939 771 5303",
   phoneHref: "tel:+639397715303",
   summary:
-    "I ship production web and mobile products with React, Next.js, React Native, Node.js, and TypeScript across fintech, real estate, and enterprise. Recent work includes a tablet POS in live merchant pilots, a Philippine e-commerce store, and an enterprise system scaled to 2,000+ branches.",
+    "Full-stack engineer and product builder with 5+ years leading the architecture and delivery of web and mobile platforms. I connect the build with the product decision: a tablet POS in live merchant pilots, a Philippine e-commerce store, and an enterprise template used across 2,000+ branches. I modernize legacy systems, deploy on cloud infrastructure, and have mentored junior engineering teams.",
 };
 
 export const facts = [
   { value: "5 yrs", label: "Production web and mobile" },
-  { value: "2,000+", label: "Branches on one enterprise system" },
+  { value: "4", label: "Projects led at Hatchit" },
   { value: "2", label: "Products built and still running" },
 ];
 
@@ -29,13 +30,14 @@ export const work = [
     name: "Billouvent",
     href: "https://billouvent.com",
     period: "2025 — Present",
-    role: "Founder & Full-Stack Engineer",
+    kind: "Independent product",
+    role: "Founder & Product Engineer",
     summary:
-      "Serverless tablet POS for retail, café, and service shops on Android tablet and iPad.",
+      "Side venture. Serverless tablet POS for retail, café, and service shops on Android tablet and iPad.",
     highlights: [
-      "Built solo in 4 months, with closed Android testing in 5 live shops.",
-      "Cash and GCash QR checkout, inventory, and a kitchen queue.",
-      "Three sync tiers to Google Sheets, with no hosting fee.",
+      "Owned the product solo and finished closed testing with 5 merchants in 4 months.",
+      "Shipped cash and GCash QR checkout, inventory, and a kitchen queue.",
+      "Architected a 3-tier sync system on the Google Sheets API, with no hosting fee.",
     ],
     details: [
       "Designed the POS so a shop can run the register on an Android tablet or iPad without paying for a server.",
@@ -49,12 +51,14 @@ export const work = [
     name: "Moto Factory",
     href: "https://www.motofactory.store",
     period: "Jun 2025 — Present",
-    role: "Founder & Full-Stack Engineer",
-    summary: "Live motorcycle-parts store for riders across the Philippines.",
+    kind: "Independent product",
+    role: "Founder & Product Engineer",
+    summary:
+      "Side venture. Live motorcycle-parts store for riders across the Philippines.",
     highlights: [
-      "Sole engineer for architecture, development, deployment, and admin.",
-      "60+ product catalog with checkout, order tracking, and buyer accounts.",
-      "PayMongo payments: QRPh, GCash, Maya, and COD. Live since June 2025.",
+      "Owned architecture, development, deployment, and admin for a Cagayan de Oro business.",
+      "Launched a 60+ product catalog with checkout, order tracking, and buyer accounts.",
+      "Integrated PayMongo for QRPh, GCash, Maya, and COD. Live since June 2025.",
     ],
     details: [
       "Sole engineer for a Cagayan de Oro motorcycle-parts business selling to riders across the Philippines.",
@@ -71,11 +75,12 @@ export const experience = [
     period: "Feb 2024 — Present",
     role: "React.js / React Native Developer",
     org: "Arizto Real Estate · ShoreAgents Inc.",
-    summary: "Web and mobile features for real-estate agents and admins in New Zealand.",
+    summary:
+      "Web and mobile features for real-estate agents and admins in New Zealand.",
     highlights: [
-      "Shipped a mobile leaderboard and iOS widgets synced from React Native to SwiftUI.",
-      "Shipped 8+ web dashboard features, including a sole agreement generator, sales and purchase checklists, and a history table revamp.",
-      "Led the App v2 dependency upgrade and triaged production crashes in Sentry.",
+      "Architected dashboard modules for leaderboards, property listings, and CRM used by New Zealand agents.",
+      "Built iOS widgets that sync React Native state into SwiftUI.",
+      "Owned the App v2 upgrade and triaged production crashes in Sentry.",
     ],
     details: [
       "Architected dashboard modules for New Zealand agents and admins, including leaderboards, property listings, and CRM integrations.",
@@ -92,9 +97,9 @@ export const experience = [
     org: "Zylun Philippines / CoDev · Sureel AI & Digital Champs",
     summary: "Two products: a Next.js rewrite, and APIs for an AI product.",
     highlights: [
-      "Digital Champs: rewrote a class-based React app to Next.js with hooks, Redux, and components.",
-      "Sureel AI: built Fastify REST endpoints and payload schemas for new frontend features.",
-      "Owned the full stack, with architecture signed off by the product owner.",
+      "Led the re-engineering of a class-based React system into Next.js.",
+      "Designed Fastify APIs and OAuth for Sureel AI, signed off by the product owner.",
+      "Owned frontend components tied to backend logic through sprint delivery.",
     ],
     details: [
       "Digital Champs: the class-based React app could not run on modern Next.js. Planned the migration, then rewrote the frontend with hooks, Redux, and components.",
@@ -108,11 +113,12 @@ export const experience = [
     period: "Mar 2022 — Feb 2024",
     role: "Full-Stack Developer / Tech Lead",
     org: "Hatchit Solutions",
-    summary: "Tech lead on enterprise templates, plus client web and mobile delivery.",
+    summary:
+      "Tech lead on enterprise templates, plus client web and mobile delivery.",
     highlights: [
-      "Tech lead on M Lhuillier POS/QCL/BCA. Next.js, TypeScript, and Sequelize template for 2,000+ branches.",
-      "Delivered a jewellery site design revamp in under a week.",
-      "Built the SurgeTech React Native app from scratch and guided junior developers.",
+      "Spearheaded the M Lhuillier POS/QCL/BCA template and deployed it across 2,000+ branches locally and internationally.",
+      "Shipped the jewellery site redesign in under a week.",
+      "Drove SurgeTech from stack choice to a React Native launch, and mentored three junior teams.",
     ],
     details: [
       "Led M Lhuillier POS, QCL, and BCA: UI, architecture, and a Next.js, TypeScript, and Sequelize template scaled to 2,000+ branches locally and internationally, matched to the client’s IT setup.",
@@ -173,13 +179,13 @@ export const skillGroups = [
     ],
   },
   {
-    label: "Data & Cloud",
+    label: "Databases & DevOps",
     items: [
       "MongoDB",
       "MySQL",
       "Firebase",
       "Supabase",
-      "Google Sheets API",
+      "GCP",
       "Azure",
       "AWS",
       "GitHub Actions",
@@ -189,7 +195,7 @@ export const skillGroups = [
     label: "Domains",
     items: [
       "E-commerce",
-      "QRPh, GCash, Maya, COD",
+      "Paymongo: QRPh, GCash, Maya, COD",
       "POS & inventory",
       "Fintech",
       "CRM",
@@ -204,19 +210,19 @@ export const education = [
     period: "2018 — 2023",
   },
   {
-    credential: "ICT · Academic Awardee",
+    credential: "Information Communication Technology",
     school: "Liceo de Cagayan University",
     period: "2016 — 2018",
   },
   {
     credential: "NCII Computer Systems Servicing",
-    school: "Liceo de Cagayan University",
-    period: "TESDA",
+    school: "Crossroads Training Institute",
+    period: "T E S D A",
   },
 ];
 
 export const nav = [
-  { href: "#work", label: "Work" },
+  { href: "#work", label: "Products" },
   { href: "#experience", label: "Experience" },
   { href: "#stack", label: "Stack" },
   { href: "#contact", label: "Contact" },

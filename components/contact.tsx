@@ -1,3 +1,4 @@
+import { ContactLinks } from "@/components/contact-links";
 import { profile } from "@/lib/profile";
 
 export function Contact() {
@@ -9,8 +10,8 @@ export function Contact() {
         </h2>
         <div>
           <p className="max-w-xl text-lg leading-relaxed">
-            Open to full-time and contract work in product engineering, web,
-            and mobile.
+            Open to lead engineering and technical product roles in web and
+            mobile.
           </p>
           <a
             href={`mailto:${profile.email}`}
@@ -25,12 +26,13 @@ export function Contact() {
             <span aria-hidden="true"> · </span>
             {profile.location}
           </p>
+          <ContactLinks className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm" />
         </div>
       </div>
       <footer className="border-t border-line">
         <div className="mx-auto flex max-w-5xl flex-col gap-2 px-6 py-6 text-sm text-muted sm:flex-row sm:justify-between">
           <p>{profile.name}</p>
-          <p>Web, mobile, and product engineering</p>
+          <p>Lead engineering and technical product ownership</p>
         </div>
       </footer>
     </section>
