@@ -39,7 +39,7 @@ export const work = [
   },
   {
     name: "Moto Factory",
-    href: "https://motofactory.store",
+    href: "https://www.motofactory.store",
     period: "Jun 2025 — Present",
     role: "Founder & Full-Stack Engineer",
     summary: "Live motorcycle-parts store for riders across the Philippines.",

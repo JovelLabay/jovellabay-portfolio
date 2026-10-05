@@ -30,7 +30,7 @@ const jsonLd = {
     addressLocality: "Cagayan de Oro City",
     addressCountry: "PH",
   },
-  sameAs: [site.github, "https://billouvent.com", "https://motofactory.store"],
+  sameAs: [site.github, "https://billouvent.com", "https://www.motofactory.store"],
   knowsAbout: [
     "React",
     "Next.js",
