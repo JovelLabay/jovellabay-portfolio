@@ -192,6 +192,10 @@ export const skillGroups = [
     ],
   },
   {
+    label: "AI",
+    items: ["Cursor", "Generative AI", "Model running", "Model testing"],
+  },
+  {
     label: "Domains",
     items: [
       "E-commerce",

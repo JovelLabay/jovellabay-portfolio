@@ -11,7 +11,7 @@ export function SeeMore({ children }: { children: React.ReactNode }) {
         type="button"
         aria-expanded={open}
         onClick={() => setOpen((value) => !value)}
-        className="cursor-pointer text-sm underline decoration-line underline-offset-4 hover:decoration-ink"
+        className="cursor-pointer text-sm text-muted transition-colors hover:text-ink"
       >
         {open ? "See less" : "See more"}
       </button>
