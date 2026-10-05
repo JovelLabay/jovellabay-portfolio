@@ -1,3 +1,5 @@
+import { BulletList } from "@/components/bullet-list";
+import { SeeMore } from "@/components/see-more";
 import { work } from "@/lib/profile";
 
 export function Work() {
@@ -27,16 +29,12 @@ export function Work() {
               <p className="mt-4 max-w-2xl leading-relaxed text-muted">
                 {project.summary}
               </p>
-              <ul className="mt-4 max-w-2xl space-y-3 text-sm leading-relaxed text-ink">
-                {project.points.map((point) => (
-                  <li key={point} className="pl-4 -indent-4">
-                    <span aria-hidden="true" className="text-muted">
-                      —{" "}
-                    </span>
-                    {point}
-                  </li>
-                ))}
-              </ul>
+              <div className="mt-4">
+                <BulletList items={project.highlights} />
+              </div>
+              <SeeMore>
+                <BulletList items={project.details} />
+              </SeeMore>
               <a
                 href={project.href}
                 target="_blank"

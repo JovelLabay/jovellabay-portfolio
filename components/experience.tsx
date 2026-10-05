@@ -1,3 +1,5 @@
+import { BulletList } from "@/components/bullet-list";
+import { SeeMore } from "@/components/see-more";
 import { experience } from "@/lib/profile";
 
 export function Experience() {
@@ -17,11 +19,15 @@ export function Experience() {
                     {job.role}
                   </h3>
                   <p className="mt-1 text-sm">{job.org}</p>
-                  <ul className="mt-4 max-w-2xl space-y-3 text-sm leading-relaxed text-muted">
-                    {job.points.map((point) => (
-                      <li key={point}>{point}</li>
-                    ))}
-                  </ul>
+                  <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted">
+                    {job.summary}
+                  </p>
+                  <div className="mt-4">
+                    <BulletList items={job.highlights} />
+                  </div>
+                  <SeeMore>
+                    <BulletList items={job.details} />
+                  </SeeMore>
                 </div>
               </div>
             </li>
